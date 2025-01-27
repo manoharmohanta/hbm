@@ -1,60 +1,70 @@
-# CodeIgniter 4 Framework
+# Hotel Booking Management CRM - Roles Overview
 
-## What is CodeIgniter?
+This document provides an overview of the default roles available in the Hotel Booking Management CRM and their respective responsibilities. These roles are designed to streamline operations and ensure clear role-based access control.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+---
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Roles and Responsibilities
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### 1. **Super Admin**
+- **Description**: Oversees the entire CRM system.
+- **Responsibilities**:
+  - View all hotels and their details.
+  - Access and manage hotel owner information.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### 2. **Hotel Owner**
+- **Description**: Manages their specific hotel and its operations.
+- **Responsibilities**:
+  - View hotel information, including rooms and bookings.
+  - Manage hotel staff and assign roles.
+  - Monitor customer activities and feedback.
 
-## Important Change with index.php
+### 3. **Hotel Manager**
+- **Description**: Handles the day-to-day operations of the hotel.
+- **Responsibilities**:
+  - Manage staff assignments and schedules.
+  - Oversee room availability and customer bookings.
+  - Ensure smooth customer service and satisfaction.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+### 4. **Staff**
+- **Description**: Supports operational tasks at the hotel.
+- **Responsibilities**:
+  - Manage room statuses and assignments.
+  - Interact with customers as needed.
+  - Handle customer orders and provide assistance.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### 5. **Customer**
+- **Description**: Guests using the system for hotel services.
+- **Responsibilities**:
+  - View room details and availability.
+  - Access Wi-Fi credentials.
+  - Request housekeeping services.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+### 6. **Housekeeping**
+- **Description**: Maintains cleanliness and room readiness.
+- **Responsibilities**:
+  - Update room statuses:
+    - **Red**: Cleaning in progress.
+    - **Orange**: Room booked.
+    - **Green**: Room empty and clean.
 
-## Repository Management
+### 7. **Front Office**
+- **Description**: Manages customer-facing operations.
+- **Responsibilities**:
+  - Handle check-ins and check-outs.
+  - Process billing and payments.
+  - Address customer inquiries.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+### 8. **Kitchen**
+- **Description**: Oversees food and beverage orders.
+- **Responsibilities**:
+  - Update order statuses:
+    - **Red**: Order placed.
+    - **Orange**: Order in preparation.
+    - **Green**: Order completed.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+---
 
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+## Notes
+- These roles are predefined to ensure efficient hotel operations and role-based access.
+- Customization of roles and permissions can be done based on specific business requirements.

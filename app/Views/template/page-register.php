@@ -9,6 +9,7 @@
     <title>Register - Freemium Hotel Booking Management</title>
     <meta name="description" content="Freemium Hotel Booking Management">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="<?= csrf_hash() ?>">
 
     <link rel="apple-touch-icon" href="<?= base_url('public/') ?>images/favicon.png">
     <link rel="shortcut icon" href="<?= base_url('public/') ?>images/favicon.png">
@@ -42,6 +43,7 @@
                         hx-trigger="click[event.target.matches('button')]"
                         hx-on::after-request="handleResponse(event)"
                         hx-swap="none" class="form">
+                    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
                     <div class="form-group">
                         <label>Full Name (As per id Proof)</label><span class="text-danger">*</span>
                         <input type="text" class="form-control" name="name" placeholder="User Name" value="Manohar">
@@ -117,6 +119,17 @@
                 console.error('Error parsing response:', e);
             }
         }
+        document.addEventListener('htmx:configRequest', (event) => {
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+            event.detail.headers['X-CSRF-TOKEN'] = csrfToken;
+        });
+
+        document.addEventListener('htmx:afterRequest', (event) => {
+            const csrfToken = event.detail.xhr.getResponseHeader('X-CSRF-TOKEN');
+            if (csrfToken) {
+                document.querySelector('meta[name="csrf-token"]').content = csrfToken;
+            }
+        });
     </script>
 </body>
 </html>

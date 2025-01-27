@@ -46,7 +46,8 @@ class Hotel extends BaseController
             $result = $userModel->registerUser($data);
 
             // Return JSON response
-            return $this->response->setJSON($result);
+            return $this->response->setJSON($result)
+                                ->setHeader('X-CSRF-TOKEN', csrf_hash());
         }
         return view('template/page-register');
     }

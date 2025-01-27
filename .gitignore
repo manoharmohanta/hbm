@@ -1,0 +1,4 @@
+# Exclude .env file
+.env
+# Ignore writable directory
+writable/

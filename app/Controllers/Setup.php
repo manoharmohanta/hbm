@@ -85,7 +85,14 @@ class Setup extends Controller
                 'role_id' => [
                     'type' => 'INT',
                     'constraint' => 11,
-                    'unsigned' => true
+                    'unsigned' => true,
+                    'default' => 2
+                ],
+                'email_activation' => [
+                    'type' => 'TINYINT',
+                    'constraint' => 1,
+                    'unsigned' => true,
+                    'default' => 0
                 ],
                 'status' => [
                     'type' => 'ENUM',

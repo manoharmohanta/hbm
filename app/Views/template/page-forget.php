@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login - <?= WEBSITE_NAME ?></title>
+    <title>Forget Password - <?= WEBSITE_NAME ?></title>
     <meta name="description" content="<?= WEBSITE_NAME ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="<?= base_url('public/') ?>assets/css/style.css">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
 </head>
 <body class="bg-dark-light">
@@ -42,25 +41,8 @@
                             <label>Email address</label><span class="text-danger">*</span>
                             <input type="email" class="form-control" placeholder="Email">
                         </div>
-                        <div class="form-group">
-                            <label>Password</label><span class="text-danger">*</span>
-                            <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Remember Me
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Sign in</button>
+                        <button type="submit" class="btn btn-primary btn-flat m-b-15">Submit</button>
                     </form>
-                    <div class="checkbox pt-1 mb-5">
-                        <label class="pull-left">
-                            Don't have account ? <a href="<?= base_url('hotel/register') ?>"> Sign Up Here</a>
-                        </label>
-                        <label class="pull-right">
-                            <a href="<?= base_url('hotel/forget-password') ?>">Forgotten Password?</a>
-                        </label>
-                    </div>
                 </div>
             </div>
         </div>

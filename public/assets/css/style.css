@@ -19,6 +19,37 @@ Googel Fonts  */
 
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+:root {
+  --custom-primary: #ff204e;
+  --custom-secondary: #a0153e;
+}
+
+/* Override Bootstrap Classes Using Variables */
+.btn-primary,
+.bg-primary {
+  background-color: var(--custom-primary) !important;
+  border-color: var(--custom-primary) !important;
+}
+
+.text-primary {
+  color: var(--custom-primary) !important;
+}
+
+.btn-secondary,
+.bg-secondary {
+  background-color: var(--custom-secondary) !important;
+  border-color: var(--custom-secondary) !important;
+}
+
+.text-secondary {
+  color: var(--custom-secondary) !important;
+}
+
+
+.bg-dark-light{
+  background : #ffecef;
+}
 .bg-flat-color-1 {
   background: #00c292; }
 

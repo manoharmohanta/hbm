@@ -91,45 +91,62 @@
     <script>
         function handleResponse(event) {
             const response = event.detail.xhr.response;
-            console.log('Raw Response:', response); // Debugging the response
 
             try {
                 const responseData = JSON.parse(response);
 
+                // Check the response status
                 if (responseData.status === 'success') {
                     Swal.fire({
                         icon: 'success',
                         title: 'Success',
                         text: responseData.message,
+                    }).then(() => {
+                        // Redirect to the dashboard after the alert closes
+                        window.location.href = responseData.redirectUrl;  // Replace with the correct URL of your dashboard
                     });
                 } else if (responseData.status === 'error') {
-                    const errors = responseData.errors;
-                    let errorMessages = '';
-                    for (const key in errors) {
-                        errorMessages += `<p>${errors[key]}</p>`;
+                    let errorMessage = responseData.message || 'An unknown error occurred.'; // Use the error message if present
+
+                    // If there are errors, show them as a list
+                    if (responseData.errors) {
+                        let errorMessages = '<ul>';
+                        for (const key in responseData.errors) {
+                            errorMessages += `<li>${responseData.errors[key]}</li>`;
+                        }
+                        errorMessages += '</ul>';
+                        errorMessage += '<br>' + errorMessages;
                     }
 
                     Swal.fire({
                         icon: 'error',
                         title: 'Error',
-                        html: errorMessages,
+                        html: errorMessage,
+                    });
+
+                } else {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Unexpected Response',
+                        text: 'Received an unexpected response status.',
                     });
                 }
+
+                // Optionally update the CSRF token if needed
+                if (responseData.csrf_token) {
+                    document.querySelector('input[name="<?= csrf_token() ?>"]').value = responseData.csrf_token;
+                    document.querySelector('meta[name="csrf-token"]').content = response.csrf_token;
+                }
             } catch (e) {
+                // Handle JSON parse errors or other unexpected issues
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Response Error',
+                    text: 'Failed to process the server response. Please try again.',
+                });
                 console.error('Error parsing response:', e);
             }
         }
-        document.addEventListener('htmx:configRequest', (event) => {
-            const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
-            event.detail.headers['X-CSRF-TOKEN'] = csrfToken;
-        });
-
-        document.addEventListener('htmx:afterRequest', (event) => {
-            const csrfToken = event.detail.xhr.getResponseHeader('X-CSRF-TOKEN');
-            if (csrfToken) {
-                document.querySelector('meta[name="csrf-token"]').content = csrfToken;
-            }
-        });
     </script>
 </body>
 </html>

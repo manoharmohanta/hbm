@@ -26,21 +26,8 @@ class UserModel extends Model
         ],
     ];
 
-    // Set the before insert actions (e.g., hashing the password)
-    protected $beforeInsert = ['hashPassword'];
-
-    // Hash the password before inserting
-    protected function hashPassword(array $data)
-    {
-        if (isset($data['data']['password'])) {
-            $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
-        }
-        return $data;
-    }
-
     // Insert the user data into the database
-    public function registerUser($data)
-    {
+    public function registerUser($data){
         try {
             // Validate the data first
             if (!$this->validate($data)) {
@@ -49,12 +36,67 @@ class UserModel extends Model
 
             // Insert data using the query builder
             if ($this->insert($data)) {
-                return ['status' => 'success', 'message' => 'User registered successfully.'];
+                return ['status' => 'success', 'message' => 'User registered successfully.', 'redirectUrl' => base_url('hotel/login'), 'csrf_token' => csrf_hash()];
             } else {
-                return ['status' => 'error', 'message' => 'Failed to register user.'];
+                return ['status' => 'error', 'message' => 'Failed to register user.', 'csrf_token' => csrf_hash()];
             }
         } catch (\Exception $e) {
-            return ['status' => 'error', 'message' => 'Error: ' . $e->getMessage()];
+            return ['status' => 'error', 'message' => 'Error: ' . $e->getMessage(), 'csrf_token' => csrf_hash()];
         }
+    }
+
+    public function loginUser($email, $password){
+        // Check if the user exists
+        $user = $this->where('email', $email)->first();
+
+        if (!$user) {
+            return [
+                'status' => 'error',
+                'message' => 'Invalid email.',
+                'csrf_token' => csrf_hash(),
+            ];
+        }
+
+        // Verify the password
+        if (!password_verify($password, $user['password'])) {
+            return [
+                'status' => 'error',
+                'message' => 'Invalid password.',
+                'csrf_token' => csrf_hash(),
+            ];
+        }
+
+        if(!$user['email_activation']){
+            return [
+                'status' => 'error',
+                'message' => 'Activate your email.',
+                'csrf_token' => csrf_hash(),
+            ];
+        }
+
+        if($user['status'] != 'active'){
+            return [
+                'status' => 'error',
+                'message' => 'You are suspended from this platform.',
+                'csrf_token' => csrf_hash(),
+            ];
+        }
+
+        // Store all user data in session upon successful login
+        session()->set('user', $user);
+
+        // If successful, return success message and user data
+        return [
+            'status' => 'success',
+            'message' => 'Login successful!',
+            'user' => [
+                'id' => $user['id'],
+                'name' => $user['name'],
+                'email' => $user['email'],
+                'role_id' => $user['role_id'],
+            ],
+            'redirectUrl' => base_url('hotel/dashboard'),
+            'csrf_token' => csrf_hash(),
+        ];
     }
 }

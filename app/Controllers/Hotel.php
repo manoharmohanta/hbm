@@ -4,10 +4,8 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 
-class Hotel extends BaseController
-{
-    public function index(): string
-    {
+class Hotel extends BaseController{
+    public function index(){
         return view('welcome_message');
     }
     public function login(){

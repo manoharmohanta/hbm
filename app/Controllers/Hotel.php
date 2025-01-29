@@ -87,15 +87,7 @@ class Hotel extends BaseController{
     }
     public function dashboard(){
         if($this->isUserLoggedIn()){
-            // Test hashing and verifying
-            $plainPassword = 'Manohar';
-            $hashedPassword = password_hash($plainPassword, PASSWORD_DEFAULT);;
-
-            if (password_verify($plainPassword, $hashedPassword)) {
-                echo "Password verification succeeded!";
-            } else {
-                echo "Password verification failed!";
-            }
+            return view('template/include/header').view('template/main').view('template/include/footer');
         }else{
             session()->destroy();
             return redirect()->to(base_url('hotel/login'));

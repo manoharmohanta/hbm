@@ -6,8 +6,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Register - Freemium Hotel Booking Management</title>
-    <meta name="description" content="Freemium Hotel Booking Management">
+    <title>Register - <?= WEBSITE_NAME ?></title>
+    <meta name="description" content="<?= WEBSITE_NAME ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="<?= csrf_hash() ?>">
 

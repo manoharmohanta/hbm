@@ -49,7 +49,7 @@ class Hotel extends BaseController{
             $validation->setRules([
                 'name' => 'required|min_length[3]|max_length[255]',
                 'email' => 'required|valid_email|is_unique[users.email]',
-                'phone' => 'required|numeric|min_length[10]|max_length[15]|is_unique[users.phone]',
+                'phone' => 'required|numeric|min_length[10]|max_length[10]|is_unique[users.phone]',
                 'password' => 'required|min_length[6]',
             ]);
 
@@ -92,6 +92,48 @@ class Hotel extends BaseController{
             session()->destroy();
             return redirect()->to(base_url('hotel/login'));
         }
+    }
+    public function profile(){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+
+        if ($this->request->isAJAX() || $this->request->hasHeader('HX-Request')) {
+            $user = $this->getUserDataFromSession();
+            $userModel = new UserModel();
+
+            // Prepare the updated data
+            $updatedData = [
+                'name'  => $this->request->getPost('name'),
+                'email' => $this->request->getPost('email'),
+                'phone' => $this->request->getPost('phone'),
+            ];
+
+            if ($this->request->getPost('password')) {
+                $updatedData['password'] = $this->request->getPost('password'); // Password will be hashed in the model
+            }
+
+            // Call updateUser() from UserModel
+            $response = $userModel->updateUser($user['id'], $updatedData);
+
+            if ($response['status'] === 'success') {
+                // Update session data after saving
+                $updatedUser = $userModel->find($user['id']);
+                $session = session();
+                $existingUserData = $session->get('user'); // Get current session data
+
+                // Merge existing session user data with updated fields
+                $updatedUserData = array_merge($existingUserData, $updatedUser);
+
+                // Update the session with merged data
+                $session->set('user', $updatedUserData);
+            }
+
+            return $this->response->setJSON($response);
+        }
+
+        $data['user'] = $this->getUserDataFromSession();
+        return view('template/include/header') . view('template/profile', $data) . view('template/include/footer');
     }
 
     public function logout() {

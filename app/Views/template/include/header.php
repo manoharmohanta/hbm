@@ -9,6 +9,7 @@
     <title>Dashboard - <?= WEBSITE_NAME ?></title>
     <meta name="description" content="Dashboard - <?= WEBSITE_NAME ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="<?= csrf_hash() ?>">
 
     <link rel="apple-touch-icon" href="<?= base_url('public/') ?>images/favicon.png">
     <link rel="shortcut icon" href="<?= base_url('public/') ?>images/favicon.png">
@@ -169,7 +170,7 @@
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
+                            <a class="nav-link" href="<?= base_url('hotel/profile') ?>"><i class="fa fa- user"></i>My Profile</a>
 
                             <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
 

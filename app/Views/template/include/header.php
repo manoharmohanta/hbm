@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="<?= base_url('public/') ?>assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="<?= base_url('public/') ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= base_url('public/') ?>assets/css/lib/datatable/dataTables.bootstrap.min.css">
     <script src="https://unpkg.com/htmx.org"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
@@ -75,10 +76,15 @@
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="<?= base_url('hotel/dashboard') ?>"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                    <li class="<?= (service('uri')->getSegment(2) == '') ? 'active' : '' ?>">
+                        <a href="<?= base_url(session()->get('controller').'') ?>"><i class="menu-icon fa fa-laptop"></i>Dashboard</a>
                     </li>
-                    <li class="menu-title">UI elements</li><!-- /.menu-title -->
+
+                    <li class="menu-title">Hotels</li><!-- /.menu-title -->
+
+                    <li class="<?= (service('uri')->getSegment(2) == 'hotel') ? 'active' : '' ?>">
+                        <a href="<?= base_url(session()->get('controller').'/hotel') ?>"> <i class="menu-icon fa fa-home"></i>All Hotel View</a>
+                    </li>
                     <!-- <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Components</a>
                         <ul class="sub-menu children dropdown-menu">                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Buttons</a></li>
@@ -93,15 +99,15 @@
                             <li><i class="fa fa-th"></i><a href="ui-grids.html">Grids</a></li>
                             <li><i class="fa fa-file-word-o"></i><a href="ui-typgraphy.html">Typography</a></li>
                         </ul>
-                    </li>
-                    <li class="menu-item-has-children dropdown">
+                    </li> -->
+                    <!-- <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Tables</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Basic Table</a></li>
+                            <li><i class="fa fa-table"></i><a href="<?= base_url('hotel/hotel') ?>">All Hotel View</a></li>
                             <li><i class="fa fa-table"></i><a href="tables-data.html">Data Table</a></li>
                         </ul>
-                    </li>
-                    <li class="menu-item-has-children dropdown">
+                    </li> -->
+                    <!--<li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Forms</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Basic Form</a></li>
@@ -170,7 +176,7 @@
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="<?= base_url('hotel/profile') ?>"><i class="fa fa- user"></i>My Profile</a>
+                            <a class="nav-link" href="<?= base_url(session()->get('controller').'/profile') ?>"><i class="fa fa- user"></i>My Profile</a>
 
                             <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
 

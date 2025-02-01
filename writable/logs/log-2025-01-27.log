@@ -1,0 +1,222 @@
+CRITICAL - 2025-01-27 09:28:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/setup.php"
+[Method: GET, Route: setup]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/setup.php')
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/setup', [], true)
+ 3 APPPATH/Controllers/Setup.php(9): view('template/setup')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Setup->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-01-27 09:29:51 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'hbm', 3306, '', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/MAMP/htdocs/hbm/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/MAMP/htdocs/hbm/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#4 /Applications/MAMP/htdocs/hbm/app/Controllers/Setup.php(14): CodeIgniter\Database\Config::forge()
+#5 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Setup->first_setup()
+#6 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#7 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/MAMP/htdocs/hbm/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#3 /Applications/MAMP/htdocs/hbm/app/Controllers/Setup.php(14): CodeIgniter\Database\Config::forge()
+#4 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Setup->first_setup()
+#5 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#6 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#8 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-01-27 09:29:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: setup/first_setup]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH/Controllers/Setup.php(14): CodeIgniter\Database\Config::forge()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Setup->first_setup()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 09:44:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/page-forget.php"
+[Method: GET, Route: hotel/forget-password]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/page-forget.php')
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/page-forget', [], true)
+ 3 APPPATH/Controllers/Hotel.php(18): view('template/page-forget')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->forget_password()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-01-27 10:37:25 --> mysqli_sql_exception: Table 'hbm.user' doesn't exist in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Validation/Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/hbm/system/Validation/StrictRules/Rules.php(187): CodeIgniter\Validation\Rules->is_unique('Manohar@idp.com', 'user.email', Array)
+#6 /Applications/MAMP/htdocs/hbm/system/Validation/Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('Manohar@idp.com', 'user.email', Array, NULL, 'email')
+#7 /Applications/MAMP/htdocs/hbm/system/Validation/Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'Manohar@idp.com', Array, Array, 'email')
+#8 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php(27): CodeIgniter\Validation\Validation->run()
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel->register()
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+#11 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-01-27 10:37:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'hbm.user' doesn't exist
+[Method: POST, Route: hotel/register]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Validation/Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/Validation/StrictRules/Rules.php(187): CodeIgniter\Validation\Rules->is_unique('Manohar@idp.com', 'user.email', [...])
+ 4 SYSTEMPATH/Validation/Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('Manohar@idp.com', 'user.email', [...], null, 'email')
+ 5 SYSTEMPATH/Validation/Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'Manohar@idp.com', [...], [...], 'email')
+ 6 APPPATH/Controllers/Hotel.php(27): CodeIgniter\Validation\Validation->run()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->register()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 10:37:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'hbm.user' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `user`
+WHERE `email` = \'Manohar@idp.com\'
+ LIMIT 1')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `user`
+WHERE `email` = \'Manohar@idp.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH/Validation/Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/Validation/StrictRules/Rules.php(187): CodeIgniter\Validation\Rules->is_unique('Manohar@idp.com', 'user.email', [...])
+ 6 SYSTEMPATH/Validation/Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('Manohar@idp.com', 'user.email', [...], null, 'email')
+ 7 SYSTEMPATH/Validation/Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'Manohar@idp.com', [...], [...], 'email')
+ 8 APPPATH/Controllers/Hotel.php(27): CodeIgniter\Validation\Validation->run()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->register()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 10:37:25 --> [Caused by] mysqli_sql_exception: Table 'hbm.user' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('SELECT 1
+FROM `user`
+WHERE `email` = \'Manohar@idp.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `user`
+WHERE `email` = \'Manohar@idp.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `user`
+WHERE `email` = \'Manohar@idp.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH/Validation/Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/Validation/StrictRules/Rules.php(187): CodeIgniter\Validation\Rules->is_unique('Manohar@idp.com', 'user.email', [...])
+ 7 SYSTEMPATH/Validation/Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('Manohar@idp.com', 'user.email', [...], null, 'email')
+ 8 SYSTEMPATH/Validation/Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'Manohar@idp.com', [...], [...], 'email')
+ 9 APPPATH/Controllers/Hotel.php(27): CodeIgniter\Validation\Validation->run()
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->register()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 12:02:49 --> CodeIgniter\Validation\Exceptions\ValidationException: "users.phone" is not a valid rule.
+[Method: POST, Route: hotel/register]
+in SYSTEMPATH/Validation/Validation.php on line 346.
+ 1 SYSTEMPATH/Validation/Validation.php(346): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('users.phone')
+ 2 SYSTEMPATH/Validation/Validation.php(202): CodeIgniter\Validation\Validation->processRules('phone', 'phone', '8801005610', [...], [...], 'phone')
+ 3 APPPATH/Controllers/Hotel.php(29): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->register()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 12:02:56 --> CodeIgniter\Validation\Exceptions\ValidationException: "users.phone" is not a valid rule.
+[Method: POST, Route: hotel/register]
+in SYSTEMPATH/Validation/Validation.php on line 346.
+ 1 SYSTEMPATH/Validation/Validation.php(346): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('users.phone')
+ 2 SYSTEMPATH/Validation/Validation.php(202): CodeIgniter\Validation\Validation->processRules('phone', 'phone', '8801005610', [...], [...], 'phone')
+ 3 APPPATH/Controllers/Hotel.php(29): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->register()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-01-27 12:16:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Hotel::$adminModel is deprecated in APPPATH/Controllers/Hotel.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Hotel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-01-27 12:16:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\Hotel::$adminModel is deprecated in APPPATH/Controllers/Hotel.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Hotel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-01-27 12:17:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Hotel::$adminModel is deprecated in APPPATH/Controllers/Hotel.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Hotel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-01-27 12:17:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Hotel::$adminModel is deprecated in APPPATH/Controllers/Hotel.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Hotel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 12:17:16 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: hotel/register]
+in SYSTEMPATH/Database/BaseConnection.php on line 941.
+ 1 SYSTEMPATH/Model.php(714): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(895): CodeIgniter\Model->builder()
+ 3 APPPATH/Models/AdminModel.php(17): CodeIgniter\Model->__get('response')
+ 4 APPPATH/Controllers/Hotel.php(49): App\Models\AdminModel->insertUser([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->register()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-27 15:18:25 --> CSRF token verified.
+INFO - 2025-01-27 15:18:39 --> CSRF token verified.

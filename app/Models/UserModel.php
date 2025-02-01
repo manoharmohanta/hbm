@@ -51,8 +51,7 @@ class UserModel extends Model{
     /**
      * Login user with email and password
      */
-    public function loginUser($email, $password)
-    {
+    public function loginUser($email, $password){
         $user = $this->select('users.*, roles.name as role_name')
                      ->join('roles', 'roles.id = users.role_id')
                      ->where('users.email', $email)
@@ -76,6 +75,23 @@ class UserModel extends Model{
 
         session()->set('user', $user);
 
+        // Define role-based redirect URLs
+        $redirectUrls = [
+            1 => 'super-admin',       // super_admin
+            2 => 'hotel-owner',       // hotel_owner
+            3 => 'hotel-manager',     // hotel_manager
+            4 => 'front-office',      // front_office
+            5 => 'housekeeping',      // housekeeping
+            6 => 'kitchen',           // kitchen
+            7 => 'staff',             // staff
+            8 => 'customer',          // customer
+        ];
+
+        // Get redirect URL based on role_id
+        $redirectUrl = $redirectUrls[$user['role_id']] ?? 'hotel'; // Fallback URL
+
+        session()->set('controller', $redirectUrl);
+
         return [
             'status' => 'success',
             'message' => 'Login successful!',
@@ -85,7 +101,7 @@ class UserModel extends Model{
                 'email' => $user['email'],
                 'role_id' => $user['role_id'],
             ],
-            'redirectUrl' => base_url('hotel/dashboard'),
+            'redirectUrl' => base_url($redirectUrl),
             'csrf_token' => csrf_hash(),
         ];
     }
@@ -124,6 +140,7 @@ class UserModel extends Model{
                 return [
                     'status' => 'success',
                     'message' => 'User updated successfully.',
+                    'redirectUrl' => base_url('hotel/profile'),
                     'csrf_token' => csrf_hash()
                 ];
             } else {

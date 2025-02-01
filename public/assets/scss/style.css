@@ -19,6 +19,12 @@ Googel Fonts  */
 
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+:root {
+  --custom-primary: #ff204e;
+  --custom-secondary: #a0153e;
+}
+
 .bg-flat-color-1 {
   background: #00c292; }
 
@@ -2085,14 +2091,14 @@ header .form-inline {
     border-radius: 0 !important; }
     .dataTables_paginate .pagination li a {
       border-radius: 0 !important;
-      color: #292b35; }
+      color: var(--custom-primary); }
     .dataTables_paginate .pagination li.active a {
-      background: #292b35;
-      border-color: #292b35;
+      background: var(--custom-secondary);
+      border-color: var(--custom-secondary);
       color: #fff; }
     .dataTables_paginate .pagination li:hover a {
-      background: #292b35;
-      border-color: #292b35;
+      background: var(--custom-primary);
+      border-color: var(--custom-primary);
       color: #fff; }
 
 /* Footer */

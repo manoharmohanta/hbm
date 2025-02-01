@@ -121,6 +121,11 @@ class Setup extends Controller
                     'unsigned' => true,
                     'auto_increment' => true
                 ],
+                'user_id' => [
+                    'type' => 'INT',
+                    'constraint' => 11,
+                    'unsigned' => true
+                ],
                 'name' => [
                     'type' => 'VARCHAR',
                     'constraint' => 255
@@ -144,10 +149,10 @@ class Setup extends Controller
                     'type' => 'VARCHAR',
                     'constraint' => 255
                 ],
-                'user_id' => [
-                    'type' => 'INT',
-                    'constraint' => 11,
-                    'unsigned' => true
+                'status' => [
+                    'type' => 'ENUM',
+                    'constraint' => ['active', 'suspended'],
+                    'default' => 'active'
                 ],
                 'created_at' => [
                     'type' => 'TIMESTAMP',

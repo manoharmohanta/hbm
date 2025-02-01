@@ -14,6 +14,11 @@
 @import "variables"; 
 @import "todo-list";
 
+:root {
+    --custom-primary: #ff204e;
+    --custom-secondary: #a0153e;
+}
+
 .transition { 
     transition: all 0.3s ease;
 } 
@@ -2158,15 +2163,15 @@ header .form-inline {
             }
             &.active {
                 a {
-                    background: #292b35;
-                    border-color: #292b35;
+                    background: var(--custom-secondary);
+                    border-color: var(--custom-secondary);
                     color: #fff;
                 }
             }
             &:hover {
                 a {
-                    background: #292b35;
-                    border-color: #292b35;
+                    background: var(--custom-primary);
+                    border-color: var(--custom-primary);
                     color: #fff;
                 }
             }

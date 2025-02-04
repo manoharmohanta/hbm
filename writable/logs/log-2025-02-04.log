@@ -25,3 +25,287 @@ in APPPATH/Views/template/user_view.php on line 55.
 10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 DEBUG - 2025-02-04 08:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 14:14:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/setup.php"
+[Method: GET, Route: setup]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/setup.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('template/setup', [], true)
+ 3 APPPATH\Controllers\Setup.php(9): view('template/setup')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-04 14:15:21 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hbm' in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'hbm', 3306, '', 0)
+#1 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\hbm\system\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\hbm\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#4 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(14): CodeIgniter\Database\Config::forge()
+#5 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->first_setup()
+#6 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#7 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hbm' in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\hbm\system\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\hbm\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#3 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(14): CodeIgniter\Database\Config::forge()
+#4 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->first_setup()
+#5 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#6 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-04 14:15:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hbm'
+[Method: GET, Route: setup/first-setup]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Controllers\Setup.php(14): CodeIgniter\Database\Config::forge()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->first_setup()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 14:23:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/setup.php"
+[Method: GET, Route: setup]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/setup.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('template/setup', [], true)
+ 3 APPPATH\Controllers\Setup.php(9): view('template/setup')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 15:19:23 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:20:34 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:20:34 --> ErrorException: Undefined property: App\Controllers\Setup::$db
+[Method: POST, Route: setup/setupDatabase]
+in APPPATH\Controllers\Setup.php on line 14.
+ 1 APPPATH\Controllers\Setup.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Setup::$db', 'C:\\xampp\\htdocs\\hbm\\app\\Controllers\\Setup.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 15:20:43 --> ErrorException: Undefined property: App\Controllers\Setup::$db
+[Method: GET, Route: setup/setupDatabase]
+in APPPATH\Controllers\Setup.php on line 14.
+ 1 APPPATH\Controllers\Setup.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Setup::$db', 'C:\\xampp\\htdocs\\hbm\\app\\Controllers\\Setup.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:21:43 --> CSRF token verified.
+INFO - 2025-02-04 15:22:02 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:22:05 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:22:08 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:24:06 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:24:09 --> CSRF token verified.
+INFO - 2025-02-04 15:24:42 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:30:59 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:31:02 --> CSRF token verified.
+INFO - 2025-02-04 15:31:20 --> CSRF token verified.
+INFO - 2025-02-04 15:32:41 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:33:38 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:40:51 --> CSRF token verified.
+ERROR - 2025-02-04 15:40:52 --> mysqli_sql_exception: Can't create table `hbm`.`hotels` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `h...', 0)
+#1 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `h...')
+#2 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `h...')
+#3 C:\xampp\htdocs\hbm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `h...')
+#4 C:\xampp\htdocs\hbm\app\Database\Migrations\2025-02-04-030621_CreateHotelsTable.php(62): CodeIgniter\Database\Forge->createTable('hotels')
+#5 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(866): App\Database\Migrations\CreateHotelsTable->up()
+#6 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(26): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+#9 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#10 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+INFO - 2025-02-04 15:41:09 --> CSRF token verified.
+ERROR - 2025-02-04 15:41:09 --> mysqli_sql_exception: Can't create table `hbm`.`hotels` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `h...', 0)
+#1 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `h...')
+#2 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `h...')
+#3 C:\xampp\htdocs\hbm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `h...')
+#4 C:\xampp\htdocs\hbm\app\Database\Migrations\2025-02-04-030621_CreateHotelsTable.php(62): CodeIgniter\Database\Forge->createTable('hotels')
+#5 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(866): App\Database\Migrations\CreateHotelsTable->up()
+#6 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(26): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+#9 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#10 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+INFO - 2025-02-04 15:46:10 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:46:10 --> Error: Call to undefined method CodeIgniter\Database\MigrationRunner::version()
+[Method: POST, Route: setup/setupDatabase]
+in APPPATH\Controllers\Setup.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:46:38 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:46:38 --> Error: Call to undefined method CodeIgniter\Database\MigrationRunner::version()
+[Method: POST, Route: setup/setupDatabase]
+in APPPATH\Controllers\Setup.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 15:48:10 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:48:16 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:48:16 --> Error: Call to undefined method CodeIgniter\Database\MigrationRunner::version()
+[Method: POST, Route: setup/setupDatabase]
+in APPPATH\Controllers\Setup.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:49:44 --> CSRF token verified.
+INFO - 2025-02-04 15:50:29 --> CSRF token verified.
+INFO - 2025-02-04 15:56:57 --> CSRF token verified.
+INFO - 2025-02-04 15:57:11 --> CSRF token verified.
+ERROR - 2025-02-04 15:57:12 --> mysqli_sql_exception: Can't create table `hbm`.`hotels` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `h...', 0)
+#1 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `h...')
+#2 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `h...')
+#3 C:\xampp\htdocs\hbm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `h...')
+#4 C:\xampp\htdocs\hbm\app\Database\Migrations\2025-02-04-030621_CreateHotelsTable.php(62): CodeIgniter\Database\Forge->createTable('hotels')
+#5 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(866): App\Database\Migrations\CreateHotelsTable->up()
+#6 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(31): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+#9 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#10 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+INFO - 2025-02-04 16:01:54 --> CSRF token verified.
+ERROR - 2025-02-04 16:01:54 --> mysqli_sql_exception: Can't create table `hbm`.`managers` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `m...', 0)
+#1 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `m...')
+#2 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `m...')
+#3 C:\xampp\htdocs\hbm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `m...')
+#4 C:\xampp\htdocs\hbm\app\Database\Migrations\2025-02-04-030621_CreateManagersTable.php(40): CodeIgniter\Database\Forge->createTable('managers')
+#5 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(866): App\Database\Migrations\CreateManagersTable->up()
+#6 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(31): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+#9 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#10 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+INFO - 2025-02-04 16:04:41 --> CSRF token verified.
+CRITICAL - 2025-02-04 16:29:12 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: setup]
+in APPPATH\Controllers\Setup.php on line 19.
+ 1 SYSTEMPATH\Router\Router.php(565): CodeIgniter\Router\AutoRouter->getRoute('setup', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('setup')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('setup')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 16:31:20 --> CSRF token verified.

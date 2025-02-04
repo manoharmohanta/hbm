@@ -82,6 +82,7 @@
 
                 // Optionally update the CSRF token if needed
                 if (responseData.csrf_token) {
+                    console.log(responseData.csrf_token);
                     document.querySelector('input[name="<?= csrf_token() ?>"]').value = responseData.csrf_token;
                     document.querySelector('meta[name="csrf-token"]').content = response.csrf_token;
                 }
@@ -93,6 +94,7 @@
                     text: 'Failed to process the server response. Please try again.',
                 });
                 console.error('Error parsing response:', e);
+                
             }
         }
     </script>

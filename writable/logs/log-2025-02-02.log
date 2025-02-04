@@ -1,0 +1,915 @@
+INFO - 2025-02-02 12:14:17 --> CSRF token verified.
+DEBUG - 2025-02-02 12:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:14:25 --> CSRF token verified.
+DEBUG - 2025-02-02 12:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:18:52 --> CSRF token verified.
+DEBUG - 2025-02-02 12:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:19:03 --> CSRF token verified.
+DEBUG - 2025-02-02 12:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:19:59 --> CSRF token verified.
+DEBUG - 2025-02-02 12:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:20:15 --> CSRF token verified.
+DEBUG - 2025-02-02 12:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:25:11 --> CSRF token verified.
+DEBUG - 2025-02-02 12:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:25:16 --> CSRF token verified.
+DEBUG - 2025-02-02 12:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:26:18 --> CSRF token verified.
+DEBUG - 2025-02-02 12:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:26:23 --> CSRF token verified.
+DEBUG - 2025-02-02 12:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:27:53 --> CSRF token verified.
+DEBUG - 2025-02-02 12:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:27:58 --> CSRF token verified.
+DEBUG - 2025-02-02 12:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:29:55 --> CSRF token verified.
+DEBUG - 2025-02-02 12:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:30:00 --> CSRF token verified.
+DEBUG - 2025-02-02 12:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:31:20 --> CSRF token verified.
+DEBUG - 2025-02-02 12:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:31:24 --> CSRF token verified.
+DEBUG - 2025-02-02 12:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:32:49 --> CSRF token verified.
+DEBUG - 2025-02-02 12:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:32:54 --> CSRF token verified.
+DEBUG - 2025-02-02 12:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:33:17 --> CSRF token verified.
+DEBUG - 2025-02-02 12:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:33:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:33:22 --> CSRF token verified.
+DEBUG - 2025-02-02 12:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:33:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:33:57 --> CSRF token verified.
+DEBUG - 2025-02-02 12:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:34:01 --> CSRF token verified.
+DEBUG - 2025-02-02 12:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:35:27 --> CSRF token verified.
+DEBUG - 2025-02-02 12:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:35:32 --> CSRF token verified.
+DEBUG - 2025-02-02 12:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:35:59 --> CSRF token verified.
+DEBUG - 2025-02-02 12:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:36:16 --> CSRF token verified.
+DEBUG - 2025-02-02 12:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 12:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 12:58:47 --> CSRF token verified.
+DEBUG - 2025-02-02 12:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-02 12:58:47 --> mysqli_sql_exception: Column 'user_id' cannot be null in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `ho...', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 /Applications/MAMP/htdocs/hbm/system/Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Applications/MAMP/htdocs/hbm/app/Models/HotelModel.php(34): CodeIgniter\Model->insert(Array)
+#8 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel(Array)
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#11 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-02-02 12:58:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 6 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 12:58:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'Test Hotel\', \'8765432109\', \'test@hotel.com\', \'test,test\', \'2025-02-02 12:58:47\', \'2025-02-02 12:58:47\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'Test Hotel\', \'8765432109\', \'test@hotel.com\', \'test,test\', \'2025-02-02 12:58:47\', \'2025-02-02 12:58:47\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 8 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 12:58:47 --> [Caused by] mysqli_sql_exception: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'Test Hotel\', \'8765432109\', \'test@hotel.com\', \'test,test\', \'2025-02-02 12:58:47\', \'2025-02-02 12:58:47\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'Test Hotel\', \'8765432109\', \'test@hotel.com\', \'test,test\', \'2025-02-02 12:58:47\', \'2025-02-02 12:58:47\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'Test Hotel\', \'8765432109\', \'test@hotel.com\', \'test,test\', \'2025-02-02 12:58:47\', \'2025-02-02 12:58:47\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 9 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 12:59:04 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Security/Security.php on line 262.
+ 1 SYSTEMPATH/Security/Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH/Filters/CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH/Filters/Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('hotel-owner/add-hotel', 'before')
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 12:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 13:00:13 --> CSRF token verified.
+DEBUG - 2025-02-02 13:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-02 13:00:13 --> mysqli_sql_exception: Column 'user_id' cannot be null in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `ho...', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 /Applications/MAMP/htdocs/hbm/system/Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Applications/MAMP/htdocs/hbm/app/Models/HotelModel.php(34): CodeIgniter\Model->insert(Array)
+#8 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel(Array)
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#11 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-02-02 13:00:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 6 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:00:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'test\', \'2025-02-02 13:00:13\', \'2025-02-02 13:00:13\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'test\', \'2025-02-02 13:00:13\', \'2025-02-02 13:00:13\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 8 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:00:13 --> [Caused by] mysqli_sql_exception: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'test\', \'2025-02-02 13:00:13\', \'2025-02-02 13:00:13\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'test\', \'2025-02-02 13:00:13\', \'2025-02-02 13:00:13\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'test\', \'2025-02-02 13:00:13\', \'2025-02-02 13:00:13\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 9 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 13:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 13:02:30 --> CSRF token verified.
+DEBUG - 2025-02-02 13:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-02 13:02:30 --> mysqli_sql_exception: Column 'user_id' cannot be null in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `ho...', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 /Applications/MAMP/htdocs/hbm/system/Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Applications/MAMP/htdocs/hbm/app/Models/HotelModel.php(34): CodeIgniter\Model->insert(Array)
+#8 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel(Array)
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#11 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-02-02 13:02:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 6 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:02:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'zsxda\', \'2025-02-02 13:02:30\', \'2025-02-02 13:02:30\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'zsxda\', \'2025-02-02 13:02:30\', \'2025-02-02 13:02:30\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 8 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:02:30 --> [Caused by] mysqli_sql_exception: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'zsxda\', \'2025-02-02 13:02:30\', \'2025-02-02 13:02:30\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'zsxda\', \'2025-02-02 13:02:30\', \'2025-02-02 13:02:30\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'zsxda\', \'2025-02-02 13:02:30\', \'2025-02-02 13:02:30\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 9 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 13:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 13:03:39 --> CSRF token verified.
+DEBUG - 2025-02-02 13:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-02 13:03:39 --> mysqli_sql_exception: Column 'user_id' cannot be null in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `ho...', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 /Applications/MAMP/htdocs/hbm/system/Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Applications/MAMP/htdocs/hbm/app/Models/HotelModel.php(34): CodeIgniter\Model->insert(Array)
+#8 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel(Array)
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#11 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-02-02 13:03:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 6 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:03:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'sajkdhd\', \'2025-02-02 13:03:39\', \'2025-02-02 13:03:39\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'sajkdhd\', \'2025-02-02 13:03:39\', \'2025-02-02 13:03:39\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 8 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:03:39 --> [Caused by] mysqli_sql_exception: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'sajkdhd\', \'2025-02-02 13:03:39\', \'2025-02-02 13:03:39\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'sajkdhd\', \'2025-02-02 13:03:39\', \'2025-02-02 13:03:39\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'sajkdhd\', \'2025-02-02 13:03:39\', \'2025-02-02 13:03:39\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 9 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-02 13:28:31 --> CSRF token verified.
+DEBUG - 2025-02-02 13:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 13:29:57 --> CSRF token verified.
+DEBUG - 2025-02-02 13:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-02 13:29:57 --> mysqli_sql_exception: Column 'user_id' cannot be null in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `ho...', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 /Applications/MAMP/htdocs/hbm/system/Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Applications/MAMP/htdocs/hbm/app/Models/HotelModel.php(34): CodeIgniter\Model->insert(Array)
+#8 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel(Array)
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#11 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-02-02 13:29:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 6 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:29:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'akjsndaksdnk\', \'2025-02-02 13:29:57\', \'2025-02-02 13:29:57\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'akjsndaksdnk\', \'2025-02-02 13:29:57\', \'2025-02-02 13:29:57\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 8 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:29:57 --> [Caused by] mysqli_sql_exception: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'akjsndaksdnk\', \'2025-02-02 13:29:57\', \'2025-02-02 13:29:57\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'akjsndaksdnk\', \'2025-02-02 13:29:57\', \'2025-02-02 13:29:57\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@test.com\', \'akjsndaksdnk\', \'2025-02-02 13:29:57\', \'2025-02-02 13:29:57\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 9 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 13:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:33:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 13:33:32 --> CSRF token verified.
+DEBUG - 2025-02-02 13:33:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-02 13:33:32 --> mysqli_sql_exception: Column 'user_id' cannot be null in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `ho...', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 /Applications/MAMP/htdocs/hbm/system/Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Applications/MAMP/htdocs/hbm/app/Models/HotelModel.php(34): CodeIgniter\Model->insert(Array)
+#8 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel(Array)
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#11 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-02-02 13:33:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 6 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:33:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'asdsad\', \'8801005610\', \'sadsad@gas.com\', \'asda\', \'2025-02-02 13:33:32\', \'2025-02-02 13:33:32\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'asdsad\', \'8801005610\', \'sadsad@gas.com\', \'asda\', \'2025-02-02 13:33:32\', \'2025-02-02 13:33:32\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 8 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:33:32 --> [Caused by] mysqli_sql_exception: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'asdsad\', \'8801005610\', \'sadsad@gas.com\', \'asda\', \'2025-02-02 13:33:32\', \'2025-02-02 13:33:32\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'asdsad\', \'8801005610\', \'sadsad@gas.com\', \'asda\', \'2025-02-02 13:33:32\', \'2025-02-02 13:33:32\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'asdsad\', \'8801005610\', \'sadsad@gas.com\', \'asda\', \'2025-02-02 13:33:32\', \'2025-02-02 13:33:32\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 9 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 13:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 13:43:35 --> CSRF token verified.
+DEBUG - 2025-02-02 13:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-02 13:43:35 --> mysqli_sql_exception: Column 'user_id' cannot be null in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `ho...', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 /Applications/MAMP/htdocs/hbm/system/Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Applications/MAMP/htdocs/hbm/app/Models/HotelModel.php(34): CodeIgniter\Model->insert(Array)
+#8 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel(Array)
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#11 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-02-02 13:43:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 6 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:43:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@gmail.com\', \'test\', \'2025-02-02 13:43:35\', \'2025-02-02 13:43:35\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@gmail.com\', \'test\', \'2025-02-02 13:43:35\', \'2025-02-02 13:43:35\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 8 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:43:35 --> [Caused by] mysqli_sql_exception: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@gmail.com\', \'test\', \'2025-02-02 13:43:35\', \'2025-02-02 13:43:35\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@gmail.com\', \'test\', \'2025-02-02 13:43:35\', \'2025-02-02 13:43:35\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test role\', \'8801005610\', \'test@gmail.com\', \'test\', \'2025-02-02 13:43:35\', \'2025-02-02 13:43:35\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 9 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 13:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 13:44:01 --> CSRF token verified.
+DEBUG - 2025-02-02 13:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-02 13:44:01 --> mysqli_sql_exception: Column 'user_id' cannot be null in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `ho...', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 /Applications/MAMP/htdocs/hbm/system/Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Applications/MAMP/htdocs/hbm/app/Models/HotelModel.php(34): CodeIgniter\Model->insert(Array)
+#8 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel(Array)
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#11 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-02-02 13:44:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 6 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:44:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test\', \'8801005610\', \'test@gmail.com\', \'test\', \'2025-02-02 13:44:01\', \'2025-02-02 13:44:01\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test\', \'8801005610\', \'test@gmail.com\', \'test\', \'2025-02-02 13:44:01\', \'2025-02-02 13:44:01\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 8 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:44:01 --> [Caused by] mysqli_sql_exception: Column 'user_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test\', \'8801005610\', \'test@gmail.com\', \'test\', \'2025-02-02 13:44:01\', \'2025-02-02 13:44:01\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test\', \'8801005610\', \'test@gmail.com\', \'test\', \'2025-02-02 13:44:01\', \'2025-02-02 13:44:01\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (NULL, \'test\', \'8801005610\', \'test@gmail.com\', \'test\', \'2025-02-02 13:44:01\', \'2025-02-02 13:44:01\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hotels` (`user_id`, `name`, `phone`, `email_id`, `address`, `created_at`, `updated_at`) VALUES (:user_id:, :name:, :phone:, :email_id:, :address:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Models/HotelModel.php(34): CodeIgniter\Model->insert([...])
+ 9 APPPATH/Controllers/Hotel_owner.php(201): App\Models\HotelModel->addHotel([...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+11 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+12 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 13:46:26 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Security/Security.php on line 262.
+ 1 SYSTEMPATH/Security/Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH/Filters/CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH/Filters/Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('hotel-owner/add-hotel', 'before')
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 13:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 13:46:52 --> CSRF token verified.
+DEBUG - 2025-02-02 13:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-02 13:46:52 --> Error: Array callback must have exactly two elements
+[Method: POST, Route: hotel-owner/add-hotel]
+in APPPATH/Controllers/Hotel_owner.php on line 194.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 13:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 13:48:57 --> CSRF token verified.
+DEBUG - 2025-02-02 13:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 13:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 14:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 14:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 14:02:03 --> CSRF token verified.
+DEBUG - 2025-02-02 14:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 14:02:34 --> CSRF token verified.
+CRITICAL - 2025-02-02 14:02:34 --> ArgumentCountError: Too few arguments to function App\Controllers\Hotel_owner::edit_hotel(), 0 passed in /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php on line 933 and exactly 1 expected
+[Method: POST, Route: hotel-owner/edit-hotel]
+in APPPATH/Controllers/Hotel_owner.php on line 215.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_hotel()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 14:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 14:03:45 --> CSRF token verified.
+DEBUG - 2025-02-02 14:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 14:04:16 --> CSRF token verified.
+DEBUG - 2025-02-02 14:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 14:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 14:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 14:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 17:30:13 --> CSRF token verified.
+DEBUG - 2025-02-02 17:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-02 17:38:07 --> ErrorException: Undefined variable $role
+[Method: GET, Route: hotel-owner/hotel]
+in APPPATH/Views/template/hotel_view.php on line 63.
+ 1 APPPATH/Views/template/hotel_view.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $role', '/Applications/MAMP/htdocs/hbm/app/Views/template/hotel_view.php', 63)
+ 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/hbm/app/Views/template/hotel_view.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/hotel_view', [], true)
+ 5 APPPATH/Controllers/Hotel_owner.php(188): view('template/hotel_view', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->hotel()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 17:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 17:40:59 --> CSRF token verified.
+DEBUG - 2025-02-02 17:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 17:42:01 --> CSRF token verified.
+DEBUG - 2025-02-02 17:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 17:42:35 --> CSRF token verified.
+DEBUG - 2025-02-02 17:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-02 17:46:22 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: Hotel_owner/hotel]
+in APPPATH/Views/template/hotel_view.php on line 113.
+ 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/hotel_view', [], true)
+ 3 APPPATH/Controllers/Hotel_owner.php(188): view('template/hotel_view', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->hotel()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 17:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 17:51:45 --> CSRF token verified.
+DEBUG - 2025-02-02 17:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-02 17:51:45 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\HotelModel::addHotel
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Model.php on line 930.
+ 1 APPPATH/Controllers/Hotel_owner.php(206): CodeIgniter\Model->__call('addHotel', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 17:51:58 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Security/Security.php on line 262.
+ 1 SYSTEMPATH/Security/Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH/Filters/CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH/Filters/Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('hotel-owner/add-hotel', 'before')
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 17:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 17:52:37 --> CSRF token verified.
+DEBUG - 2025-02-02 17:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-02 17:52:37 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\HotelModel::addHotel
+[Method: POST, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Model.php on line 930.
+ 1 APPPATH/Controllers/Hotel_owner.php(206): CodeIgniter\Model->__call('addHotel', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_hotel()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 17:53:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 17:53:43 --> CSRF token verified.
+DEBUG - 2025-02-02 17:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 17:58:38 --> CSRF token verified.
+DEBUG - 2025-02-02 17:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 17:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:01:57 --> CSRF token verified.
+DEBUG - 2025-02-02 18:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:02:39 --> CSRF token verified.
+DEBUG - 2025-02-02 18:02:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:02:44 --> CSRF token verified.
+DEBUG - 2025-02-02 18:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:05:05 --> CSRF token verified.
+DEBUG - 2025-02-02 18:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:07:43 --> CSRF token verified.
+DEBUG - 2025-02-02 18:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:07:54 --> CSRF token verified.
+DEBUG - 2025-02-02 18:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:08:02 --> CSRF token verified.
+DEBUG - 2025-02-02 18:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:08:13 --> CSRF token verified.
+DEBUG - 2025-02-02 18:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:10:14 --> CSRF token verified.
+DEBUG - 2025-02-02 18:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:10:27 --> CSRF token verified.
+DEBUG - 2025-02-02 18:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:11:46 --> CSRF token verified.
+DEBUG - 2025-02-02 18:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 18:12:31 --> CSRF token verified.
+DEBUG - 2025-02-02 18:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 18:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-02 19:06:54 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\HotelModel::setValidationRuleCallback
+[Method: GET, Route: hotel-owner/add-hotel]
+in SYSTEMPATH/Model.php on line 930.
+ 1 APPPATH/Models/HotelModel.php(42): CodeIgniter\Model->__call('setValidationRuleCallback', [...])
+ 2 APPPATH/Controllers/Hotel_owner.php(32): App\Models\HotelModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Hotel_owner->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-02 19:07:11 --> Error: Call to a member function setRule() on null
+[Method: GET, Route: hotel-owner/add-hotel]
+in APPPATH/Models/HotelModel.php on line 42.
+ 1 APPPATH/Controllers/Hotel_owner.php(32): App\Models\HotelModel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Hotel_owner->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-02 19:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 19:08:01 --> CSRF token verified.
+DEBUG - 2025-02-02 19:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 19:08:10 --> CSRF token verified.
+DEBUG - 2025-02-02 19:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-02 19:09:02 --> CSRF token verified.
+DEBUG - 2025-02-02 19:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-02 19:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -80,11 +80,60 @@
                         <a href="<?= base_url(session()->get('controller').'') ?>"><i class="menu-icon fa fa-laptop"></i>Dashboard</a>
                     </li>
 
+                    <li class="menu-title">Roles</li><!-- /.menu-title -->
+
+                    <li class="<?= (service('uri')->getSegment(2) == 'role') ? 'active' : '' ?>">
+                        <a href="<?= base_url(session()->get('controller').'/role') ?>"> <i class="menu-icon fa fa-home"></i>All Role View</a>
+                    </li>
+
+                    <li class="menu-title">Users</li><!-- /.menu-title -->
+
+                    <li class="<?= (service('uri')->getSegment(2) == 'user') ? 'active' : '' ?>">
+                        <a href="<?= base_url(session()->get('controller').'/user') ?>"> <i class="menu-icon fa fa-home"></i>All User View</a>
+                    </li>
+
+                    <li class="menu-title">Managers</li><!-- /.menu-title -->
+
+                    <li class="<?= (service('uri')->getSegment(2) == 'manager') ? 'active' : '' ?>">
+                        <a href="<?= base_url(session()->get('controller').'/manager') ?>"> <i class="menu-icon fa fa-home"></i>All Manager View</a>
+                    </li>
+
                     <li class="menu-title">Hotels</li><!-- /.menu-title -->
 
                     <li class="<?= (service('uri')->getSegment(2) == 'hotel') ? 'active' : '' ?>">
                         <a href="<?= base_url(session()->get('controller').'/hotel') ?>"> <i class="menu-icon fa fa-home"></i>All Hotel View</a>
                     </li>
+
+                    <li class="menu-title">Rooms</li><!-- /.menu-title -->
+
+                    <li class="<?= (service('uri')->getSegment(2) == 'room') ? 'active' : '' ?>">
+                        <a href="<?= base_url(session()->get('controller').'/room') ?>"> <i class="menu-icon fa fa-home"></i>All Room View</a>
+                    </li>
+
+                    <li class="menu-title">Staffs</li><!-- /.menu-title -->
+
+                    <li class="<?= (service('uri')->getSegment(2) == 'staff') ? 'active' : '' ?>">
+                        <a href="<?= base_url(session()->get('controller').'/staff') ?>"> <i class="menu-icon fa fa-home"></i>All Staff View</a>
+                    </li>
+
+                    <li class="menu-title">Menus</li><!-- /.menu-title -->
+
+                    <li class="<?= (service('uri')->getSegment(2) == 'menu') ? 'active' : '' ?>">
+                        <a href="<?= base_url(session()->get('controller').'/menu') ?>"> <i class="menu-icon fa fa-home"></i>All Menu View</a>
+                    </li>
+
+                    <li class="menu-title">Orders</li><!-- /.menu-title -->
+
+                    <li class="<?= (service('uri')->getSegment(2) == 'oder') ? 'active' : '' ?>">
+                        <a href="<?= base_url(session()->get('controller').'/order') ?>"> <i class="menu-icon fa fa-home"></i>All Order View</a>
+                    </li>
+
+                    <li class="menu-title">Bookings</li><!-- /.menu-title -->
+
+                    <li class="<?= (service('uri')->getSegment(2) == 'booking') ? 'active' : '' ?>">
+                        <a href="<?= base_url(session()->get('controller').'/booking') ?>"> <i class="menu-icon fa fa-home"></i>All Booking View</a>
+                    </li>
+
                     <!-- <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Components</a>
                         <ul class="sub-menu children dropdown-menu">                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Buttons</a></li>

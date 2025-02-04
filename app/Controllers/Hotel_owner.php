@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\HotelModel;
+use App\Models\ManagerModel;
+use App\Models\RoleModel;
+use CodeIgniter\I18n\Time;
 
 class Hotel_owner extends BaseController{
     /*
@@ -18,6 +21,20 @@ class Hotel_owner extends BaseController{
         6. Super Admit - He will able to see all the things.
     */
     // Dashboard
+    protected $roleModel;
+    protected $className;
+    protected $hotelModel;
+    protected $managerModel;
+    protected $userModel;
+
+    public function __construct()
+    {
+        $this->roleModel = new RoleModel();
+        $this->hotelModel = new HotelModel();
+        $this->managerModel = new ManagerModel();
+        $this->userModel = new UserModel();
+        $this->className = (new \ReflectionClass($this))->getShortName();
+    }
     public function index(){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
@@ -69,13 +86,116 @@ class Hotel_owner extends BaseController{
         $data['user'] = $this->getUserDataFromSession();
         return view('template/include/header') . view('template/profile', $data) . view('template/include/footer');
     }
-    // CURD Manager
-    public function add_manager(){
+    // CURD Role
+    public function add_role(){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+
+        if ($this->request->getMethod() === 'post' || $this->request->hasHeader('HX-Request')) {
+            $data = [
+                'name' => $this->request->getPost('name'),
+            ];
+
+            $response = $this->roleModel->addRole($data);
+
+            if ($response['status'] === 'success') {
+                $response['redirectUrl'] = base_url($this->className.'/role');
+            }
+
+            return $this->response->setJSON($response);
+        }
+
+        return view('template/include/header') . view('template/role_add') . view('template/include/footer');
+    }
+    public function role(){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+
+        $data['roles'] = $this->roleModel->findAll();
+        return view('template/include/header') . view('template/role_view', $data) . view('template/include/footer');
+    }
+    public function edit_role($id){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+
+        $role = $this->roleModel->find($id);
+        if (!$role) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Role not found.',
+                'csrf_token' => csrf_hash()
+            ]);
+        }
+
+        if ($this->request->getMethod() === 'post'  || $this->request->hasHeader('HX-Request')) {
+            $data = [
+                'name' => $this->request->getPost('name'),
+            ];
+
+            $response = $this->roleModel->updateRole($id, $data);
+
+            if ($response['status'] === 'success') {
+                $response['redirectUrl'] = base_url($this->className.'/role');
+            }
+
+            return $this->response->setJSON($response);
+        }
+
+        return view('template/include/header') . view('template/role_add', ['role' => $role]) . view('template/include/footer');
+    }
+    public function delete_role($id){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+
+        if ($this->request->getMethod() === 'post'  || $this->request->hasHeader('HX-Request')) {
+
+            $response = $this->roleModel->deleteRole($id);
+
+            if ($response['status'] === 'success') {
+                $response['redirectUrl'] = base_url($this->className.'/role');
+            }
+
+            return $this->response->setJSON($response);
+        }
+    }
+    //CURD User
+    public function user(){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+
+        $data['users'] = $this->userModel->select('users.*, roles.name as role_name')
+                                        ->join('roles', 'roles.id = users.role_id')
+                                        ->findAll();
+        // echo $this->userModel->db->getLastQuery(); exit();
+        return view('template/include/header') . view('template/user_view', $data) . view('template/include/footer');
+    }
+    public function add_user(){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }
     }
+    public function edit_user(){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+    }
+    public function delete_user(){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+    }
+    // CURD Manager
     public function manager(){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+    }
+    public function add_manager(){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }
@@ -96,9 +216,8 @@ class Hotel_owner extends BaseController{
             return redirect()->to(base_url('hotel/logout'));
         }
         
-        $hotelModel = new HotelModel();
-        $userId = session()->get('user_id'); // Assuming user_id is stored in session
-        $data['hotels'] = $hotelModel->getHotelsByUser($userId);
+        $userId = $this->getUserDataFromSession()['id']; // Assuming user_id is stored in session
+        $data['hotels'] = $this->hotelModel->where('user_id', $userId)->findAll();
         return view('template/include/header').view('template/hotel_view',$data).view('template/include/footer');
     }
     public function add_hotel(){
@@ -106,16 +225,152 @@ class Hotel_owner extends BaseController{
             return redirect()->to(base_url('hotel/logout'));
         }
 
-        return view('template/include/header').view('template/hotel_add').view('template/include/footer');
+        if ($this->request->getMethod() === 'post' || $this->request->hasHeader('HX-Request')) {
+            // Define strict validation rules
+            $validationRules = [
+                'name' => 'required|min_length[3]|max_length[255]|alpha_numeric_space',
+                'phone' => 'required|regex_match[/^[0-9]{10}$/]', // Ensures exactly 10 digits
+                'email_id' => 'required|valid_email',
+                'address' => 'required|min_length[5]|max_length[500]',
+            ];
+
+            if (!$this->validate($validationRules)) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Validation failed.',
+                    'errors' => $this->validator->getErrors(),
+                    'csrf_token' => csrf_hash()
+                ]);
+            }
+
+            // Sanitize input to prevent XSS
+            $userData = $this->getUserDataFromSession();
+            $data = [
+                'user_id' => (int) $userData['id'], // Force user_id to integer
+                'name' => strip_tags($this->request->getPost('name')),
+                'phone' => strip_tags($this->request->getPost('phone')),
+                'email_id' => strip_tags($this->request->getPost('email_id')),
+                'address' => strip_tags($this->request->getPost('address')),
+                'created_at' => Time::now()->toDateTimeString()
+            ];
+
+            // Insert data securely
+            if ($this->hotelModel->insert($data)) {
+                return $this->response->setJSON([
+                    'status' => 'success',
+                    'message' => 'Hotel added successfully.',
+                    'redirectUrl' => base_url($this->className . '/hotel'),
+                    'csrf_token' => csrf_hash()
+                ]);
+            } else {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Failed to add hotel. Please try again.',
+                    'csrf_token' => csrf_hash()
+                ]);
+            }
+        }
+
+        return view('template/include/header')
+            . view('template/hotel_add')
+            . view('template/include/footer');
     }
-    public function edit_hotel(){
+    public function edit_hotel($id){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }
+
+        $hotel = $this->hotelModel->find($id);
+        if (!$hotel) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Hotel not found.',
+                'csrf_token' => csrf_hash()
+            ]);
+        }
+
+        if ($this->request->getMethod() === 'post' || $this->request->hasHeader('HX-Request')) {
+            // Define strict validation rules
+            $validationRules = [
+                'name' => 'required|min_length[3]|max_length[255]|alpha_numeric_space',
+                'phone' => 'required|regex_match[/^[0-9]{10}$/]', // Ensures exactly 10 digits
+                'email_id' => 'required|valid_email',
+                'address' => 'required|min_length[5]|max_length[500]',
+            ];
+
+            if (!$this->validate($validationRules)) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Validation failed.',
+                    'errors' => $this->validator->getErrors(),
+                    'csrf_token' => csrf_hash()
+                ]);
+            }
+
+            // Sanitize input to prevent XSS
+            $userData = $this->getUserDataFromSession();
+            $data = [
+                'user_id' => (int) $userData['id'], // Force user_id to integer
+                'name' => strip_tags($this->request->getPost('name')),
+                'phone' => strip_tags($this->request->getPost('phone')),
+                'email_id' => strip_tags($this->request->getPost('email_id')),
+                'address' => strip_tags($this->request->getPost('address')),
+                'updated_at' => Time::now()->toDateTimeString()
+            ];
+
+            $response = $this->hotelModel->update($id, $data);
+
+            if ($response) {
+                return $this->response->setJSON([
+                    'status' => 'success',
+                    'message' => 'Hotel updated successfully.',
+                    'redirectUrl' => base_url($this->className . '/hotel'),
+                    'csrf_token' => csrf_hash()
+                ]);
+            } else {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Failed to update hotel.',
+                    'csrf_token' => csrf_hash()
+                ]);
+            }
+        }
+        return view('template/include/header') . 
+                view('template/hotel_add', ['hotel' => $hotel]) . 
+                view('template/include/footer');
     }
-    public function delete_hotel(){
+    public function delete_hotel($id){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
+        }
+
+        if ($this->request->getMethod() === 'post'  || $this->request->hasHeader('HX-Request')) {
+
+            $hotel = $this->hotelModel->find($id);
+            if (!$hotel) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Hotel not found.',
+                    'csrf_token' => csrf_hash()
+                ]);
+            }
+
+            $response = $this->hotelModel->delete($id);
+
+            if ($response) {
+                return $this->response->setJSON([
+                    'status' => 'success',
+                    'message' => 'Hotel deleted successfully.',
+                    'redirectUrl' => base_url($this->className . '/hotel'),
+                    'csrf_token' => csrf_hash()
+                ]);
+            } else {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'Failed to update hotel.',
+                    'csrf_token' => csrf_hash()
+                ]);
+            }
         }
     }
     // Hotel Rooms 

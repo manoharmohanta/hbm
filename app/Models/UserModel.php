@@ -9,11 +9,17 @@ class UserModel extends Model{
     protected $primaryKey = 'id';
     protected $allowedFields = ['name', 'email', 'phone', 'password', 'id_proof', 'email_activation', 'status', 'created_at', 'updated_at'];
 
+    protected $useTimestamps = true; // Enables automatic timestamps
+    protected $createdField = 'created_at'; // Column for created timestamp
+    protected $updatedField = 'updated_at'; // Column for updated timestamp
+
+    protected $useSoftDeletes = true; // Enables soft delete
+    protected $deletedField = 'deleted_at'; // Column for soft deletes
     // Validation rules for registration
     protected $validationRules = [
         'name'     => 'required|string|max_length[255]',
         'email'    => 'required|valid_email|is_unique[users.email,id,{id}]',
-        'phone'    => 'required|string|max_length[15]',
+        'phone'    => 'required|number|max_length[15]',
         'password' => 'required|min_length[8]',
     ];
 
@@ -26,8 +32,7 @@ class UserModel extends Model{
     /**
      * Register a new user
      */
-    public function registerUser($data)
-    {
+    public function registerUser($data){
         try {
             if (!$this->validate($data)) {
                 return ['status' => 'error', 'message' => $this->errors()];

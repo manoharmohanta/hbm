@@ -49,8 +49,8 @@
                                             <?php foreach ($users as $id => $user) : ?>
                                                 <tr>
                                                     <td><?= esc($id+1) ?></td>
-                                                    <td><?= esc($user['name']) ?></td>
-                                                    <td><?= esc($user['role_name']) ?></td>
+                                                    <td><?= ucwords(esc($user['name'])) ?></td>
+                                                    <td><?= ucwords(str_replace('_',' ',esc($user['role_name']))) ?></td>
                                                     <td><?= esc($user['phone']) ?></td>
                                                     <td><?= esc($user['email']) ?></td>
                                                     <td class="text-center text-nowrap">
@@ -74,7 +74,7 @@
                                                                         htmx.trigger(this, 'confirmed');  
                                                                     }
                                                                 })">
-                                                            <i class="fa fa-trash"></i> Delete
+                                                            <i class="fa fa-trash"></i> Suspend User
                                                         </a>
                                                     </td>
                                                 </tr>

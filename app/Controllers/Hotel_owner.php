@@ -78,6 +78,8 @@ class Hotel_owner extends BaseController{
 
                 // Update the session with merged data
                 $session->set('user', $updatedUserData);
+
+                $response['redirectUrl'] = base_url(session()->get('controller').'/profile');
             }
 
             return $this->response->setJSON($response);
@@ -163,53 +165,131 @@ class Hotel_owner extends BaseController{
         }
     }
     //CURD User
-    public function user(){
+    public function user() {
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }
-
-        $data['users'] = $this->userModel->select('users.*, roles.name as role_name')
-                                        ->join('roles', 'roles.id = users.role_id')
-                                        ->findAll();
-        // echo $this->userModel->db->getLastQuery(); exit();
+    
+        $userData = $this->getUserDataFromSession();
+    
+        $data['users'] = $this->userModel
+            ->select('users.*, roles.name as role_name')
+            ->join('roles', 'roles.id = users.role_id')
+            ->join('managers', 'users.id = managers.user_id', 'left')
+            ->join('hotels', 'hotels.id = managers.hotel_id', 'left')
+            ->where('users.id !=', $userData['id']) // Exclude logged-in user if needed
+            ->groupStart()
+                ->where('hotels.user_id', $userData['id']) // Fetch staff of hotels owned
+                ->orWhere('managers.user_id IS NOT NULL') // Ensure user is a manager or staff
+            ->groupEnd()
+            ->groupBy('users.id') // Avoid duplicate users
+            ->get()
+            ->getResultArray();
+    
         return view('template/include/header') . view('template/user_view', $data) . view('template/include/footer');
     }
     public function add_user(){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }
+
+        $userData = $this->getUserDataFromSession();
+
+        if ($this->request->getMethod() === 'post' || $this->request->hasHeader('HX-Request')) {
+            $data = [
+                'name' => $this->request->getPost('name'),
+                'email' => $this->request->getPost('email'),
+                'phone' => $this->request->getPost('phone'),
+                'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT), // Hash the password
+            ];
+            $response = $this->userModel->registerUser($data);
+
+            if($response['status'] == 'success'){
+                $data = [
+                    'user_id'  => $userData['id'],  // ID of the user to be assigned as manager
+                    'hotel_id' => $this->request->getPost('hotel_id'),        // ID of the hotel
+                ];
+
+                $response = $this->managerModel->insert($data);
+
+                if($response){
+                    $response = array(
+                        'status' => 'success',
+                        'message' => 'User registered successfully.',
+                        'redirectUrl' => base_url($this->className . '/user'),
+                        'csrf_token' => csrf_hash()
+                    );
+                }
+            }
+
+            return $this->response->setJSON($response);
+        }
+        $user = $this->getUserDataFromSession();
+        $data['hotels'] = $this->hotelModel->where('user_id',$user['id'])
+                                            ->findAll();
+        $data['roles'] = $this->roleModel->findAll();
+        return view('template/include/header') . view('template/user_add',$data) . view('template/include/footer');
     }
-    public function edit_user(){
+    public function edit_user($id){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }
+        if ($this->request->getMethod() === 'post' || $this->request->hasHeader('HX-Request')) {
+            $data = [
+                'name' => $this->request->getPost('name'),
+                'email' => $this->request->getPost('email'),
+                'phone' => $this->request->getPost('phone'),
+                'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT), // Hash the password
+            ];
+            $userId = $this->request->getPost('id');
+
+            $response = $this->userModel->updateUser($userId,$data);
+
+            if($response){
+                $response['redirectUrl'] = base_url(session()->get('controller').'/user');
+            }
+
+            return $this->response->setJSON($response);
+        }
+        $data['users'] = $this->userModel->select('users.*, roles.name as role_name')
+                                        ->where('users.id',$id)
+                                        ->join('roles', 'roles.id = users.role_id')
+                                        ->join('managers', 'manager.user_id = users.user_id')
+                                        ->first();
+        $data['roles'] = $this->roleModel->findAll();
+        // echo "<pre>";print_r($data); exit();
+        return view('template/include/header') . view('template/user_add', $data) . view('template/include/footer');
     }
-    public function delete_user(){
+    public function delete_user($id){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }
-    }
-    // CURD Manager
-    public function manager(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
+        if ($this->request->getMethod() === 'post'  || $this->request->hasHeader('HX-Request')) {
+
+            $response = $this->userModel->delete($id);
+
+            if ($response) {
+                $response = array(
+                    'status' => 'success',
+                    'message' => 'User deleted successfully.',
+                    'csrf_token' => csrf_hash(),
+                    'redirectUrl' => base_url($this->className.'/user')
+                );
+            }else{
+                $response = array(
+                    'status' => 'error',
+                    'message' => 'Failed to delete user.',
+                    'csrf_token' => csrf_hash(),
+                    'redirectUrl' => base_url($this->className.'/user')
+                );
+            }
+
+            // print_r($response); exit();
+
+            return $this->response->setJSON($response);
         }
     }
-    public function add_manager(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
-    public function edit_manager(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
-    public function delete_manager(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
+
     // CURD Hotel
     public function hotel(){
         if (!$this->isUserLoggedIn()) {
@@ -480,6 +560,28 @@ class Hotel_owner extends BaseController{
     }
     //check out
     public function checkout() {
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+    }
+
+    // CURD Manager
+    public function manager(){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+    }
+    public function add_manager(){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+    }
+    public function edit_manager(){
+        if (!$this->isUserLoggedIn()) {
+            return redirect()->to(base_url('hotel/logout'));
+        }
+    }
+    public function delete_manager(){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }

@@ -42,7 +42,7 @@
 
             try {
                 const responseData = JSON.parse(response);
-
+                
                 // Check the response status
                 if (responseData.status === 'success') {
                     Swal.fire({
@@ -54,16 +54,18 @@
                         window.location.href = responseData.redirectUrl;  // Replace with the correct URL of your dashboard
                     });
                 } else if (responseData.status === 'error') {
-                    let errorMessage = responseData.message || 'An unknown error occurred.'; // Use the error message if present
+                    let errorMessage = 'An unknown error occurred.';
 
-                    // If there are errors, show them as a list
-                    if (responseData.errors) {
+                    // Handle error messages properly
+                    if (typeof responseData.message === 'string') {
+                        errorMessage = responseData.message;
+                    } else if (typeof responseData.message === 'object') {
                         let errorMessages = '<ul>';
-                        for (const key in responseData.errors) {
-                            errorMessages += `<li>${responseData.errors[key]}</li>`;
+                        for (const key in responseData.message) {
+                            errorMessages += `<li>${responseData.message[key]}</li>`;
                         }
                         errorMessages += '</ul>';
-                        errorMessage += '<br>' + errorMessages;
+                        errorMessage = errorMessages;
                     }
 
                     Swal.fire({
@@ -82,9 +84,16 @@
 
                 // Optionally update the CSRF token if needed
                 if (responseData.csrf_token) {
-                    console.log(responseData.csrf_token);
-                    document.querySelector('input[name="<?= csrf_token() ?>"]').value = responseData.csrf_token;
-                    document.querySelector('meta[name="csrf-token"]').content = response.csrf_token;
+                    let csrfInput = document.querySelector('input[name="<?= csrf_token() ?>"]');
+                    if (csrfInput) {
+                        csrfInput.value = responseData.csrf_token;
+                    }
+
+                    // Check if the meta tag for CSRF token exists
+                    let csrfMeta = document.querySelector('meta[name="csrf-token"]');
+                    if (csrfMeta) {
+                        csrfMeta.content = responseData.csrf_token;
+                    }
                 }
             } catch (e) {
                 // Handle JSON parse errors or other unexpected issues
@@ -94,7 +103,6 @@
                     text: 'Failed to process the server response. Please try again.',
                 });
                 console.error('Error parsing response:', e);
-                
             }
         }
     </script>

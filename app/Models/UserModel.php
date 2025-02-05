@@ -19,7 +19,7 @@ class UserModel extends Model{
     protected $validationRules = [
         'name'     => 'required|string|max_length[255]',
         'email'    => 'required|valid_email|is_unique[users.email,id,{id}]',
-        'phone'    => 'required|number|max_length[15]',
+        'phone'    => 'required|numeric|max_length[10]',
         'password' => 'required|min_length[8]',
     ];
 
@@ -35,7 +35,7 @@ class UserModel extends Model{
     public function registerUser($data){
         try {
             if (!$this->validate($data)) {
-                return ['status' => 'error', 'message' => $this->errors()];
+                return ['status' => 'error', 'message' => $this->errors(), 'csrf_token' => csrf_hash()];
             }
 
             if ($this->insert($data)) {
@@ -145,7 +145,7 @@ class UserModel extends Model{
                 return [
                     'status' => 'success',
                     'message' => 'User updated successfully.',
-                    'redirectUrl' => base_url('hotel/profile'),
+                    'redirectUrl' => base_url(session()->get('controller').'/profile'),
                     'csrf_token' => csrf_hash()
                 ];
             } else {

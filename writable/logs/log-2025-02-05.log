@@ -1,0 +1,282 @@
+DEBUG - 2025-02-05 07:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 07:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 07:45:48 --> CSRF token verified.
+DEBUG - 2025-02-05 07:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 07:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 07:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 07:45:51 --> mysqli_sql_exception: Unknown column 'users.user_id' in 'where clause' in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`....', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(180): CodeIgniter\Model->__call('get', Array)
+#6 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+#7 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#8 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-02-05 07:45:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.user_id' in 'where clause'
+[Method: GET, Route: hotel-owner/user]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+WHERE `users`.`user_id` = :users.user_id:
+OR `managers`.`hotel_id` IN (SELECT id FROM hotels WHERE user_id = 12)', [...], false)
+ 2 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Hotel_owner.php(180): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 07:45:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.user_id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+WHERE `users`.`user_id` = \'12\'
+OR `managers`.`hotel_id` IN (SELECT id FROM hotels WHERE user_id = 12)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+WHERE `users`.`user_id` = \'12\'
+OR `managers`.`hotel_id` IN (SELECT id FROM hotels WHERE user_id = 12)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+WHERE `users`.`user_id` = :users.user_id:
+OR `managers`.`hotel_id` IN (SELECT id FROM hotels WHERE user_id = 12)', [...], false)
+ 4 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Hotel_owner.php(180): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 07:45:51 --> [Caused by] mysqli_sql_exception: Unknown column 'users.user_id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+WHERE `users`.`user_id` = \'12\'
+OR `managers`.`hotel_id` IN (SELECT id FROM hotels WHERE user_id = 12)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+WHERE `users`.`user_id` = \'12\'
+OR `managers`.`hotel_id` IN (SELECT id FROM hotels WHERE user_id = 12)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+WHERE `users`.`user_id` = \'12\'
+OR `managers`.`hotel_id` IN (SELECT id FROM hotels WHERE user_id = 12)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+WHERE `users`.`user_id` = :users.user_id:
+OR `managers`.`hotel_id` IN (SELECT id FROM hotels WHERE user_id = 12)', [...], false)
+ 5 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Hotel_owner.php(180): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-05 07:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 07:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 07:47:04 --> CSRF token verified.
+DEBUG - 2025-02-05 07:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-05 07:47:14 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: hotel-owner/add_user]
+in SYSTEMPATH/Security/Security.php on line 262.
+ 1 SYSTEMPATH/Security/Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH/Filters/CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH/Filters/Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('hotel-owner/add_user', 'before')
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-05 07:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 07:48:26 --> CSRF token verified.
+DEBUG - 2025-02-05 07:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 07:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 07:51:26 --> CSRF token verified.
+DEBUG - 2025-02-05 07:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 07:53:55 --> CSRF token verified.
+DEBUG - 2025-02-05 07:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 07:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 07:54:21 --> CSRF token verified.
+DEBUG - 2025-02-05 07:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 07:54:21 --> mysqli_sql_exception: Duplicate entry '8907654321' for key 'users.phone' in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 /Applications/MAMP/htdocs/hbm/system/Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Applications/MAMP/htdocs/hbm/app/Models/UserModel.php(41): CodeIgniter\Model->insert(Array)
+#8 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(195): App\Models\UserModel->registerUser(Array)
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_user()
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#11 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+INFO - 2025-02-05 07:54:37 --> CSRF token verified.
+DEBUG - 2025-02-05 07:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 07:54:43 --> CSRF token verified.
+DEBUG - 2025-02-05 07:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 07:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 07:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 08:01:16 --> CSRF token verified.
+DEBUG - 2025-02-05 08:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 08:04:01 --> mysqli_sql_exception: Unknown column 'users.user_id' in 'where clause' in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`....', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(183): CodeIgniter\Model->__call('get', Array)
+#6 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+#7 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#8 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-02-05 08:04:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.user_id' in 'where clause'
+[Method: GET, Route: Hotel_owner/user]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`user_id` = :users.user_id:
+OR `hotels`.`user_id` = :hotels.user_id:
+GROUP BY `users`.`id`', [...], false)
+ 2 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Hotel_owner.php(183): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 08:04:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.user_id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`user_id` = \'12\'
+OR `hotels`.`user_id` = \'12\'
+GROUP BY `users`.`id`')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`user_id` = \'12\'
+OR `hotels`.`user_id` = \'12\'
+GROUP BY `users`.`id`')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`user_id` = :users.user_id:
+OR `hotels`.`user_id` = :hotels.user_id:
+GROUP BY `users`.`id`', [...], false)
+ 4 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Hotel_owner.php(183): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 08:04:01 --> [Caused by] mysqli_sql_exception: Unknown column 'users.user_id' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`user_id` = \'12\'
+OR `hotels`.`user_id` = \'12\'
+GROUP BY `users`.`id`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`user_id` = \'12\'
+OR `hotels`.`user_id` = \'12\'
+GROUP BY `users`.`id`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`user_id` = \'12\'
+OR `hotels`.`user_id` = \'12\'
+GROUP BY `users`.`id`')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`user_id` = :users.user_id:
+OR `hotels`.`user_id` = :hotels.user_id:
+GROUP BY `users`.`id`', [...], false)
+ 5 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Hotel_owner.php(183): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-05 08:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 08:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-05 08:06:40 --> TypeError: Cannot access offset of type Closure on array
+[Method: GET, Route: Hotel_owner/user]
+in SYSTEMPATH/Database/BaseBuilder.php on line 764.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(722): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', Object(Closure), null, 'AND ', null)
+ 2 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->where(Object(Closure))
+ 3 APPPATH/Controllers/Hotel_owner.php(181): CodeIgniter\Model->__call('where', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-05 08:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

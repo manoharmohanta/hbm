@@ -44,6 +44,10 @@ class CreateRoomBookingsTable extends Migration
             'updated_at' => [
                 'type' => 'TIMESTAMP',
                 'null' => true
+            ],
+            'deleted_at' => [
+                'type' => 'TIMESTAMP',
+                'null' => true
             ]
         ]);
         $this->forge->addKey('id', true);

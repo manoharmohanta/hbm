@@ -280,3 +280,505 @@ in SYSTEMPATH/Database/BaseBuilder.php on line 764.
  8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 DEBUG - 2025-02-05 08:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 19:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 19:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 19:39:41 --> CSRF token verified.
+INFO - 2025-02-05 19:40:06 --> CSRF token verified.
+ERROR - 2025-02-05 19:40:06 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`....', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 /Applications/MAMP/htdocs/hbm/app/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+#7 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+#8 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel->login()
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-05 19:40:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+[Method: POST, Route: hotel/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = :users.email:
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+ 5 APPPATH/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 19:40:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = :users.email:
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 19:40:06 --> [Caused by] mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = :users.email:
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+ 8 APPPATH/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-05 19:40:12 --> CSRF token verified.
+INFO - 2025-02-05 19:40:15 --> CSRF token verified.
+ERROR - 2025-02-05 19:40:15 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`....', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 /Applications/MAMP/htdocs/hbm/app/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+#7 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+#8 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel->login()
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-05 19:40:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+[Method: POST, Route: hotel/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = :users.email:
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+ 5 APPPATH/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 19:40:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = :users.email:
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 19:40:15 --> [Caused by] mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = :users.email:
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+ 8 APPPATH/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-05 19:40:26 --> CSRF token verified.
+ERROR - 2025-02-05 19:40:26 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`....', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 /Applications/MAMP/htdocs/hbm/app/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+#7 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+#8 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel->login()
+#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+#10 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-05 19:40:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+[Method: POST, Route: hotel/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = :users.email:
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+ 5 APPPATH/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 19:40:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = :users.email:
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 19:40:26 --> [Caused by] mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = \'Manohar@idp.com\'
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+WHERE `users`.`email` = :users.email:
+AND `users`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH/Models/UserModel.php(63): CodeIgniter\BaseModel->first()
+ 8 APPPATH/Controllers/Hotel.php(46): App\Models\UserModel->loginUser('Manohar@idp.com', 'Manohar')
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-05 19:42:30 --> CSRF token verified.
+DEBUG - 2025-02-05 19:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 19:42:55 --> CSRF token verified.
+INFO - 2025-02-05 19:43:01 --> CSRF token verified.
+INFO - 2025-02-05 19:43:16 --> CSRF token verified.
+DEBUG - 2025-02-05 19:43:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 19:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 19:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 19:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 20:10:19 --> CSRF token verified.
+DEBUG - 2025-02-05 20:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 20:11:35 --> CSRF token verified.
+DEBUG - 2025-02-05 20:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 20:13:12 --> CSRF token verified.
+DEBUG - 2025-02-05 20:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 20:25:53 --> CSRF token verified.
+DEBUG - 2025-02-05 20:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 20:26:07 --> CSRF token verified.
+INFO - 2025-02-05 20:28:47 --> CSRF token verified.
+INFO - 2025-02-05 20:29:37 --> CSRF token verified.
+INFO - 2025-02-05 20:29:39 --> CSRF token verified.
+INFO - 2025-02-05 20:30:39 --> CSRF token verified.
+INFO - 2025-02-05 20:30:42 --> CSRF token verified.
+INFO - 2025-02-05 20:30:47 --> CSRF token verified.
+INFO - 2025-02-05 20:31:26 --> CSRF token verified.
+INFO - 2025-02-05 20:31:43 --> CSRF token verified.
+INFO - 2025-02-05 20:31:48 --> CSRF token verified.
+INFO - 2025-02-05 20:33:06 --> CSRF token verified.
+INFO - 2025-02-05 20:33:25 --> CSRF token verified.
+DEBUG - 2025-02-05 20:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:33:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-05 20:33:45 --> CSRF token verified.
+DEBUG - 2025-02-05 20:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-05 20:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-05 20:33:53 --> mysqli_sql_exception: Table 'hbm.managers' doesn't exist in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`....', 0)
+#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 /Applications/MAMP/htdocs/hbm/system/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(186): CodeIgniter\Model->__call('get', Array)
+#6 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+#7 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+#8 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-02-05 20:33:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'hbm.managers' doesn't exist
+[Method: GET, Route: hotel-owner/user]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`id` != :users.id:
+AND   (
+`hotels`.`user_id` = :hotels.user_id:
+OR `managers`.`user_id` IS NOT NULL
+ )
+GROUP BY `users`.`id`', [...], false)
+ 2 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Hotel_owner.php(186): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 20:33:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'hbm.managers' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`id` != \'1\'
+AND   (
+`hotels`.`user_id` = \'1\'
+OR `managers`.`user_id` IS NOT NULL
+ )
+GROUP BY `users`.`id`')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`id` != \'1\'
+AND   (
+`hotels`.`user_id` = \'1\'
+OR `managers`.`user_id` IS NOT NULL
+ )
+GROUP BY `users`.`id`')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`id` != :users.id:
+AND   (
+`hotels`.`user_id` = :hotels.user_id:
+OR `managers`.`user_id` IS NOT NULL
+ )
+GROUP BY `users`.`id`', [...], false)
+ 4 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Hotel_owner.php(186): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-05 20:33:53 --> [Caused by] mysqli_sql_exception: Table 'hbm.managers' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`id` != \'1\'
+AND   (
+`hotels`.`user_id` = \'1\'
+OR `managers`.`user_id` IS NOT NULL
+ )
+GROUP BY `users`.`id`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`id` != \'1\'
+AND   (
+`hotels`.`user_id` = \'1\'
+OR `managers`.`user_id` IS NOT NULL
+ )
+GROUP BY `users`.`id`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`id` != \'1\'
+AND   (
+`hotels`.`user_id` = \'1\'
+OR `managers`.`user_id` IS NOT NULL
+ )
+GROUP BY `users`.`id`')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`id` = `users`.`role_id`
+LEFT JOIN `managers` ON `users`.`id` = `managers`.`user_id`
+LEFT JOIN `hotels` ON `hotels`.`id` = `managers`.`hotel_id`
+WHERE `users`.`id` != :users.id:
+AND   (
+`hotels`.`user_id` = :hotels.user_id:
+OR `managers`.`user_id` IS NOT NULL
+ )
+GROUP BY `users`.`id`', [...], false)
+ 5 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Hotel_owner.php(186): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->user()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

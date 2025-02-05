@@ -3,30 +3,24 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
-use App\Models\HotelModel;
+use Config\Database;
 
 class Hotel extends BaseController{
-    public function index(){
+    private $db;
+
+    public function __construct()
+    {
+        $this->db = Database::connect();
+    }
+    public function index() {
+        if(!$this->db->tableExists('migrations')){
+            return redirect()->to(base_url('setup'));
+        }
         return view('welcome_message');
     }
     public function login(){
         // Handle HTMX POST request
         if ($this->request->isAJAX() || $this->request->hasHeader('HX-Request')) {
-            $validation = \Config\Services::validation();
-
-            // Validate form inputs
-            $validation->setRules([
-                'email' => 'required|valid_email',
-                'password' => 'required|min_length[6]',
-            ]);
-
-            if (!$validation->withRequest($this->request)->run()) {
-                return $this->response->setJSON([
-                    'status' => 'error',
-                    'errors' => $validation->getErrors(),
-                    'csrf_token' => csrf_hash(), // Include updated CSRF token
-                ]);
-            }
 
             // Retrieve user input
             $email = $this->request->getPost('email');
@@ -44,24 +38,6 @@ class Hotel extends BaseController{
     public function register(){
         // Handle HTMX POST request
         if ($this->request->isAJAX() || $this->request->hasHeader('HX-Request')) {
-            $validation = \Config\Services::validation();
-
-            // Validate form inputs
-            $validation->setRules([
-                'name' => 'required|min_length[3]|max_length[255]',
-                'email' => 'required|valid_email|is_unique[users.email]',
-                'phone' => 'required|numeric|min_length[10]|max_length[10]|is_unique[users.phone]',
-                'password' => 'required|min_length[6]',
-            ]);
-
-            if (!$validation->withRequest($this->request)->run()) {
-                return $this->response->setJSON([
-                    'status' => 'error',
-                    'errors' => $validation->getErrors(),
-                    'csrf_token' => csrf_hash(), // Include updated CSRF token
-                ]);
-            }
-
             // Collect user input data
             $data = [
                 'name' => $this->request->getPost('name'),

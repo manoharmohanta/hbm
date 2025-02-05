@@ -18,7 +18,7 @@ class UserModel extends Model{
     // Validation rules for registration
     protected $validationRules = [
         'name'     => 'required|string|max_length[255]',
-        'email'    => 'required|valid_email|is_unique[users.email,id,{id}]',
+        'email'    => 'required|is_unique[users.email,id,{id}]|valid_email',
         'phone'    => 'required|numeric|max_length[10]',
         'password' => 'required|min_length[8]',
     ];
@@ -26,6 +26,7 @@ class UserModel extends Model{
     protected $validationMessages = [
         'email' => [
             'is_unique' => 'The email is already registered.',
+            'check_email_exists' => 'The provided email does not exist in our records.',
         ],
     ];
 
@@ -113,24 +114,9 @@ class UserModel extends Model{
 
     public function updateUser($userId, $data){
         try {
-            // Exclude the current user from unique email check
-            $validationRules = [
-                'name'  => 'required|string|max_length[255]',
-                'email' => 'required|valid_email|is_unique[users.email,id,{id}]',
-                'phone' => 'required|string|max_length[15]',
-            ];
-
-            // Password is optional during an update but must be at least 8 characters if provided
-            if (!empty($data['password'])) {
-                $validationRules['password'] = 'required|min_length[8]';
-            }
-
-            // Set the dynamic ID for unique email validation
-            $this->setValidationRules(str_replace('{id}', $userId, $validationRules));
-
             // Validate the data
             if (!$this->validate($data)) {
-                return ['status' => 'error', 'message' => $this->errors()];
+                return ['status' => 'error', 'message' => $this->errors(), 'csrf_token' => csrf_hash()];
             }
 
             // Hash the password if it's being updated

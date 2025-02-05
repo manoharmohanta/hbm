@@ -42,6 +42,34 @@ class Setup extends Controller
         }
     }
 
+    public function resetDatabase() {
+        // Load the database forge
+        $forge = \Config\Database::forge();
+        
+        // Get all tables in the database
+        $tables = $this->db->listTables();
+    
+        try {
+            // Drop each table
+            foreach ($tables as $table) {
+                $forge->dropTable($table, true); // true = check if exists
+            }
+    
+            // Load the migrations service
+            $migrations = service('migrations');
+    
+            // Reset migrations (rollback all)
+            if ($migrations->setNamespace(null)->regress(0)) {
+                return $this->response->setJSON(['success' => true, 'message' => 'Database reset successfully!']);
+            } else {
+                log_message('error', 'Migration reset failed.');
+                return $this->response->setJSON(['success' => false, 'message' => 'Database reset failed. Check logs.']);
+            }
+        } catch (\Exception $e) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Database reset failed: ' . $e->getMessage()]);
+        }
+    }
+
     public function first_setup(){
         $db = \Config\Database::connect();
         $forge = \Config\Database::forge();

@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\HotelModel;
-use App\Models\ManagerModel;
+use App\Models\UHORelationModel;
 use App\Models\RoleModel;
 use CodeIgniter\I18n\Time;
 
@@ -24,14 +24,14 @@ class Hotel_owner extends BaseController{
     protected $roleModel;
     protected $className;
     protected $hotelModel;
-    protected $managerModel;
+    protected $UHORelationModel;
     protected $userModel;
 
     public function __construct()
     {
         $this->roleModel = new RoleModel();
         $this->hotelModel = new HotelModel();
-        $this->managerModel = new ManagerModel();
+        $this->UHORelationModel = new UHORelationModel();
         $this->userModel = new UserModel();
         $this->className = (new \ReflectionClass($this))->getShortName();
     }
@@ -202,15 +202,16 @@ class Hotel_owner extends BaseController{
                 'phone' => $this->request->getPost('phone'),
                 'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT), // Hash the password
             ];
-            $response = $this->userModel->registerUser($data);
+            $response = $this->userModel->insert($data);
+            $insertedId = $this->userModel->insertID();
 
             if($response['status'] == 'success'){
                 $data = [
-                    'user_id'  => $userData['id'],  // ID of the user to be assigned as manager
+                    'user_id'  => $insertedId,  // ID of the user to be assigned as manager
                     'hotel_id' => $this->request->getPost('hotel_id'),        // ID of the hotel
                 ];
 
-                $response = $this->managerModel->insert($data);
+                $response = $this->UHORelationModel->insert($data);
 
                 if($response){
                     $response = array(
@@ -331,6 +332,7 @@ class Hotel_owner extends BaseController{
                 'phone' => strip_tags($this->request->getPost('phone')),
                 'email_id' => strip_tags($this->request->getPost('email_id')),
                 'address' => strip_tags($this->request->getPost('address')),
+                'hotel_owner_id' => $userData['id'],
                 'created_at' => Time::now()->toDateTimeString()
             ];
 
@@ -395,6 +397,7 @@ class Hotel_owner extends BaseController{
                 'phone' => strip_tags($this->request->getPost('phone')),
                 'email_id' => strip_tags($this->request->getPost('email_id')),
                 'address' => strip_tags($this->request->getPost('address')),
+                'hotel_owner_id' => $userData['id'],
                 'updated_at' => Time::now()->toDateTimeString()
             ];
 

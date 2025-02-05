@@ -21,6 +21,11 @@ class CreateHotelsTable extends Migration
                 'constraint' => 11,
                 'unsigned' => true
             ],
+            'hotel_owner_id' => [
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true
+            ],
             'name' => [
                 'type' => 'VARCHAR',
                 'constraint' => 255
@@ -54,6 +59,10 @@ class CreateHotelsTable extends Migration
                 'null' => true
             ],
             'updated_at' => [
+                'type' => 'TIMESTAMP',
+                'null' => true
+            ],
+            'deleted_at' => [
                 'type' => 'TIMESTAMP',
                 'null' => true
             ]

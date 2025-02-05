@@ -46,7 +46,7 @@
                                     <?php foreach ($roles as $id => $role) : ?>
                                         <tr>
                                             <td><?= esc($id + 1) ?></td>
-                                            <td><?= esc($role['name']) ?></td>
+                                            <td><?= ucwords(str_replace('_',' ',esc($role['name']))) ?></td>
                                             <td><?= esc($role['created_at']) ?></td>
                                             <td><?= esc($role['updated_at']) ?></td>
                                             <td class="text-center text-nowrap">

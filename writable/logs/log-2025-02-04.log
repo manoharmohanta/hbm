@@ -25,337 +25,295 @@ in APPPATH/Views/template/user_view.php on line 55.
 10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 DEBUG - 2025-02-04 08:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
+CRITICAL - 2025-02-04 14:14:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/setup.php"
+[Method: GET, Route: setup]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/setup.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('template/setup', [], true)
+ 3 APPPATH\Controllers\Setup.php(9): view('template/setup')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-04 14:15:21 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hbm' in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'hbm', 3306, '', 0)
+#1 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\hbm\system\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\hbm\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#4 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(14): CodeIgniter\Database\Config::forge()
+#5 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->first_setup()
+#6 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#7 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hbm' in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\hbm\system\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\hbm\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#3 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(14): CodeIgniter\Database\Config::forge()
+#4 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->first_setup()
+#5 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#6 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-04 14:15:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hbm'
+[Method: GET, Route: setup/first-setup]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Controllers\Setup.php(14): CodeIgniter\Database\Config::forge()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->first_setup()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 14:23:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/setup.php"
+[Method: GET, Route: setup]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/setup.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('template/setup', [], true)
+ 3 APPPATH\Controllers\Setup.php(9): view('template/setup')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 15:19:23 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:20:34 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:20:34 --> ErrorException: Undefined property: App\Controllers\Setup::$db
+[Method: POST, Route: setup/setupDatabase]
+in APPPATH\Controllers\Setup.php on line 14.
+ 1 APPPATH\Controllers\Setup.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Setup::$db', 'C:\\xampp\\htdocs\\hbm\\app\\Controllers\\Setup.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 15:20:43 --> ErrorException: Undefined property: App\Controllers\Setup::$db
+[Method: GET, Route: setup/setupDatabase]
+in APPPATH\Controllers\Setup.php on line 14.
+ 1 APPPATH\Controllers\Setup.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Setup::$db', 'C:\\xampp\\htdocs\\hbm\\app\\Controllers\\Setup.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:21:43 --> CSRF token verified.
+INFO - 2025-02-04 15:22:02 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:22:05 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:22:08 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:24:06 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:24:09 --> CSRF token verified.
+INFO - 2025-02-04 15:24:42 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:30:59 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:31:02 --> CSRF token verified.
+INFO - 2025-02-04 15:31:20 --> CSRF token verified.
+INFO - 2025-02-04 15:32:41 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:33:38 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:40:51 --> CSRF token verified.
+ERROR - 2025-02-04 15:40:52 --> mysqli_sql_exception: Can't create table `hbm`.`hotels` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `h...', 0)
+#1 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `h...')
+#2 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `h...')
+#3 C:\xampp\htdocs\hbm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `h...')
+#4 C:\xampp\htdocs\hbm\app\Database\Migrations\2025-02-04-030621_CreateHotelsTable.php(62): CodeIgniter\Database\Forge->createTable('hotels')
+#5 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(866): App\Database\Migrations\CreateHotelsTable->up()
+#6 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(26): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+#9 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#10 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+INFO - 2025-02-04 15:41:09 --> CSRF token verified.
+ERROR - 2025-02-04 15:41:09 --> mysqli_sql_exception: Can't create table `hbm`.`hotels` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `h...', 0)
+#1 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `h...')
+#2 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `h...')
+#3 C:\xampp\htdocs\hbm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `h...')
+#4 C:\xampp\htdocs\hbm\app\Database\Migrations\2025-02-04-030621_CreateHotelsTable.php(62): CodeIgniter\Database\Forge->createTable('hotels')
+#5 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(866): App\Database\Migrations\CreateHotelsTable->up()
+#6 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(26): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+#9 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#10 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+INFO - 2025-02-04 15:46:10 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:46:10 --> Error: Call to undefined method CodeIgniter\Database\MigrationRunner::version()
+[Method: POST, Route: setup/setupDatabase]
+in APPPATH\Controllers\Setup.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:46:38 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:46:38 --> Error: Call to undefined method CodeIgniter\Database\MigrationRunner::version()
+[Method: POST, Route: setup/setupDatabase]
+in APPPATH\Controllers\Setup.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 15:48:10 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: setup/setupDatabase]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('setup/setupDatabase', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:48:16 --> CSRF token verified.
+CRITICAL - 2025-02-04 15:48:16 --> Error: Call to undefined method CodeIgniter\Database\MigrationRunner::version()
+[Method: POST, Route: setup/setupDatabase]
+in APPPATH\Controllers\Setup.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 15:49:44 --> CSRF token verified.
+INFO - 2025-02-04 15:50:29 --> CSRF token verified.
+INFO - 2025-02-04 15:56:57 --> CSRF token verified.
+INFO - 2025-02-04 15:57:11 --> CSRF token verified.
+ERROR - 2025-02-04 15:57:12 --> mysqli_sql_exception: Can't create table `hbm`.`hotels` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `h...', 0)
+#1 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `h...')
+#2 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `h...')
+#3 C:\xampp\htdocs\hbm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `h...')
+#4 C:\xampp\htdocs\hbm\app\Database\Migrations\2025-02-04-030621_CreateHotelsTable.php(62): CodeIgniter\Database\Forge->createTable('hotels')
+#5 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(866): App\Database\Migrations\CreateHotelsTable->up()
+#6 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(31): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+#9 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#10 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+INFO - 2025-02-04 16:01:54 --> CSRF token verified.
+ERROR - 2025-02-04 16:01:54 --> mysqli_sql_exception: Can't create table `hbm`.`managers` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\hbm\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `m...', 0)
+#1 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `m...')
+#2 C:\xampp\htdocs\hbm\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `m...')
+#3 C:\xampp\htdocs\hbm\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `m...')
+#4 C:\xampp\htdocs\hbm\app\Database\Migrations\2025-02-04-030621_CreateManagersTable.php(40): CodeIgniter\Database\Forge->createTable('managers')
+#5 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(866): App\Database\Migrations\CreateManagersTable->up()
+#6 C:\xampp\htdocs\hbm\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\hbm\app\Controllers\Setup.php(31): CodeIgniter\Database\MigrationRunner->latest()
+#8 C:\xampp\htdocs\hbm\system\CodeIgniter.php(933): App\Controllers\Setup->setupDatabase()
+#9 C:\xampp\htdocs\hbm\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setup))
+#10 C:\xampp\htdocs\hbm\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\hbm\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\hbm\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\hbm\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+INFO - 2025-02-04 16:04:41 --> CSRF token verified.
+CRITICAL - 2025-02-04 16:29:12 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: setup]
+in APPPATH\Controllers\Setup.php on line 19.
+ 1 SYSTEMPATH\Router\Router.php(565): CodeIgniter\Router\AutoRouter->getRoute('setup', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('setup')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('setup')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-04 16:31:20 --> CSRF token verified.
+=======
 DEBUG - 2025-02-04 18:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-02-04 18:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-02-04 18:47:54 --> CSRF token verified.
 DEBUG - 2025-02-04 18:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-02-04 18:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-02-04 18:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 18:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 18:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2025-02-04 18:53:00 --> mysqli_sql_exception: Unknown column 'user.id' in 'where clause' in /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php:327
-Stack trace:
-#0 /Applications/MAMP/htdocs/hbm/system/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`....', 0)
-#1 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
-#2 /Applications/MAMP/htdocs/hbm/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
-#3 /Applications/MAMP/htdocs/hbm/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
-#4 /Applications/MAMP/htdocs/hbm/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
-#5 /Applications/MAMP/htdocs/hbm/system/BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
-#6 /Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php(188): CodeIgniter\BaseModel->findAll()
-#7 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
-#8 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
-#9 /Applications/MAMP/htdocs/hbm/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 /Applications/MAMP/htdocs/hbm/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
-#11 /Applications/MAMP/htdocs/hbm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 /Applications/MAMP/htdocs/hbm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 {main}
-CRITICAL - 2025-02-04 18:53:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.id' in 'where clause'
-[Method: GET, Route: hotel-owner/edit-user/12]
-in SYSTEMPATH/Database/BaseConnection.php on line 692.
- 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
-FROM `users`
-JOIN `roles` ON `roles`.`id` = `users`.`role_id`
-WHERE `user`.`id` = :user.id:
-AND `users`.`deleted_at` IS NULL', [...], false)
- 2 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 3 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 4 APPPATH/Controllers/Hotel_owner.php(188): CodeIgniter\BaseModel->findAll()
- 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
- 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-02-04 18:53:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.id' in 'where clause'
-in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
- 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
-FROM `users`
-JOIN `roles` ON `roles`.`id` = `users`.`role_id`
-WHERE `user`.`id` = \'12\'
-AND `users`.`deleted_at` IS NULL')
- 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
-FROM `users`
-JOIN `roles` ON `roles`.`id` = `users`.`role_id`
-WHERE `user`.`id` = \'12\'
-AND `users`.`deleted_at` IS NULL')
- 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
-FROM `users`
-JOIN `roles` ON `roles`.`id` = `users`.`role_id`
-WHERE `user`.`id` = :user.id:
-AND `users`.`deleted_at` IS NULL', [...], false)
- 4 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 5 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 6 APPPATH/Controllers/Hotel_owner.php(188): CodeIgniter\BaseModel->findAll()
- 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
-11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-02-04 18:53:00 --> [Caused by] mysqli_sql_exception: Unknown column 'user.id' in 'where clause'
-in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
- 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('SELECT `users`.*, `roles`.`name` as `role_name`
-FROM `users`
-JOIN `roles` ON `roles`.`id` = `users`.`role_id`
-WHERE `user`.`id` = \'12\'
-AND `users`.`deleted_at` IS NULL', 0)
- 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `roles`.`name` as `role_name`
-FROM `users`
-JOIN `roles` ON `roles`.`id` = `users`.`role_id`
-WHERE `user`.`id` = \'12\'
-AND `users`.`deleted_at` IS NULL')
- 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `roles`.`name` as `role_name`
-FROM `users`
-JOIN `roles` ON `roles`.`id` = `users`.`role_id`
-WHERE `user`.`id` = \'12\'
-AND `users`.`deleted_at` IS NULL')
- 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`name` as `role_name`
-FROM `users`
-JOIN `roles` ON `roles`.`id` = `users`.`role_id`
-WHERE `user`.`id` = :user.id:
-AND `users`.`deleted_at` IS NULL', [...], false)
- 5 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 6 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
- 7 APPPATH/Controllers/Hotel_owner.php(188): CodeIgniter\BaseModel->findAll()
- 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
-10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
-12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 18:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 18:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 18:57:12 --> ErrorException: Undefined array key "name"
-[Method: GET, Route: hotel-owner/edit-user/12]
-in APPPATH/Views/template/user_add.php on line 34.
- 1 APPPATH/Views/template/user_add.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php', 34)
- 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php')
- 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/user_add', [], true)
- 5 APPPATH/Controllers/Hotel_owner.php(189): view('template/user_add', [...])
- 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 18:58:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 18:58:55 --> ErrorException: Undefined array key "id"
-[Method: GET, Route: hotel-owner/edit-user/12]
-in APPPATH/Views/template/user_add.php on line 15.
- 1 APPPATH/Views/template/user_add.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php', 15)
- 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php')
- 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/user_add', [], true)
- 5 APPPATH/Controllers/Hotel_owner.php(189): view('template/user_add', [...])
- 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 18:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 18:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 18:59:09 --> ErrorException: Undefined array key "id"
-[Method: GET, Route: hotel-owner/edit-user/12]
-in APPPATH/Views/template/user_add.php on line 15.
- 1 APPPATH/Views/template/user_add.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php', 15)
- 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php')
- 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/user_add', [], true)
- 5 APPPATH/Controllers/Hotel_owner.php(189): view('template/user_add', [...])
- 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 19:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 19:00:23 --> ErrorException: Undefined array key "id"
-[Method: GET, Route: hotel-owner/edit-user/12]
-in APPPATH/Views/template/user_add.php on line 15.
- 1 APPPATH/Views/template/user_add.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php', 15)
- 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php')
- 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/user_add', [], true)
- 5 APPPATH/Controllers/Hotel_owner.php(189): view('template/user_add', [...])
- 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 19:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 19:00:28 --> ErrorException: Undefined array key "id"
-[Method: GET, Route: hotel-owner/edit-user/12]
-in APPPATH/Views/template/user_add.php on line 15.
- 1 APPPATH/Views/template/user_add.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php', 15)
- 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php')
- 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/user_add', [], true)
- 5 APPPATH/Controllers/Hotel_owner.php(189): view('template/user_add', [...])
- 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 19:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 19:00:29 --> ErrorException: Undefined array key "id"
-[Method: GET, Route: hotel-owner/edit-user/12]
-in APPPATH/Views/template/user_add.php on line 15.
- 1 APPPATH/Views/template/user_add.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php', 15)
- 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php')
- 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/user_add', [], true)
- 5 APPPATH/Controllers/Hotel_owner.php(189): view('template/user_add', [...])
- 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 19:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 19:00:29 --> ErrorException: Undefined array key "id"
-[Method: GET, Route: hotel-owner/edit-user/12]
-in APPPATH/Views/template/user_add.php on line 15.
- 1 APPPATH/Views/template/user_add.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php', 15)
- 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php')
- 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/user_add', [], true)
- 5 APPPATH/Controllers/Hotel_owner.php(189): view('template/user_add', [...])
- 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 19:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 19:26:26 --> ParseError: syntax error, unexpected token "}", expecting "," or ";"
-[Method: GET, Route: hotel-owner/edit-user/12]
-in APPPATH/Views/template/user_add.php on line 69.
- 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/user_add', [], true)
- 3 APPPATH/Controllers/Hotel_owner.php(191): view('template/user_add', [...])
- 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->edit_user('12')
- 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 19:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 19:30:53 --> ErrorException: Undefined variable $users
-[Method: GET, Route: hotel-owner/add-user]
-in APPPATH/Views/template/user_add.php on line 75.
- 1 APPPATH/Views/template/user_add.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', '/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php', 75)
- 2 SYSTEMPATH/View/View.php(224): include('/Applications/MAMP/htdocs/hbm/app/Views/template/user_add.php')
- 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('template/user_add', [], true)
- 5 APPPATH/Controllers/Hotel_owner.php(180): view('template/user_add')
- 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->add_user()
- 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 19:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 19:38:06 --> CSRF token verified.
-DEBUG - 2025-02-04 19:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 19:38:06 --> ErrorException: Trying to access array offset on true
-[Method: POST, Route: hotel-owner/delete-user/12]
-in APPPATH/Controllers/Hotel_owner.php on line 202.
- 1 APPPATH/Controllers/Hotel_owner.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on true', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php', 202)
- 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->delete_user('12')
- 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 19:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 19:38:43 --> CSRF token verified.
-DEBUG - 2025-02-04 19:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-02-04 19:38:43 --> ErrorException: Trying to access array offset on true
-[Method: POST, Route: hotel-owner/delete-user/12]
-in APPPATH/Controllers/Hotel_owner.php on line 202.
- 1 APPPATH/Controllers/Hotel_owner.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on true', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel_owner.php', 202)
- 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel_owner->delete_user('12')
- 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel_owner))
- 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-02-04 19:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 19:42:45 --> CSRF token verified.
-DEBUG - 2025-02-04 19:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 19:43:59 --> CSRF token verified.
-DEBUG - 2025-02-04 19:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 19:45:23 --> CSRF token verified.
-DEBUG - 2025-02-04 19:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 19:48:28 --> CSRF token verified.
-DEBUG - 2025-02-04 19:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 19:49:53 --> CSRF token verified.
-DEBUG - 2025-02-04 19:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 19:53:32 --> CSRF token verified.
-DEBUG - 2025-02-04 19:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 19:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 20:03:28 --> CSRF token verified.
-DEBUG - 2025-02-04 20:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 20:04:44 --> CSRF token verified.
-DEBUG - 2025-02-04 20:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 20:04:53 --> CSRF token verified.
-DEBUG - 2025-02-04 20:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 20:49:06 --> CSRF token verified.
-DEBUG - 2025-02-04 20:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-02-04 20:54:50 --> CSRF token verified.
-DEBUG - 2025-02-04 20:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 20:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 21:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 21:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 21:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 21:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 21:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-02-04 21:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

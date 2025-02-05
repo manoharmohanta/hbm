@@ -2,11 +2,44 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use CodeIgniter\Database\Migrations\Runner;
+use Config\Database;
 
 class Setup extends Controller
 {
+    protected $db;
+
+    public function __construct()
+    {
+        $this->db = Database::connect();
+    }
     public function index() {
+        if($this->db->tableExists('migrations')){
+            return redirect()->to(base_url());
+        }
         return view('template/setup');
+    }
+
+    public function setupDatabase() {
+        // Load the migrations service
+        $migrations = service('migrations');
+
+        // Check if migrations table exists (instead of just "users" table)
+        if ($this->db->tableExists('migrations')) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Database already set up.']);
+        }
+
+        try {
+            // Run all available migrations in order
+            if ($migrations->setNamespace(null)->latest()) {
+                return $this->response->setJSON(['success' => true, 'message' => 'Database setup successfully!']);
+            } else {
+                log_message('error', 'Migration failed.');
+                return $this->response->setJSON(['success' => false, 'message' => 'Database setup failed. Check logs.']);
+            }
+        } catch (\Exception $e) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Database setup failed: ' . $e->getMessage()]);
+        }
     }
 
     public function first_setup(){

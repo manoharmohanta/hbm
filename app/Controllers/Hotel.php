@@ -92,11 +92,24 @@ class Hotel extends BaseController{
                 'email' => $this->request->getPost('email'),
                 'phone' => $this->request->getPost('phone'),
                 'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT), // Hash the password
-                'created_at' => date('Y-m-d H:i:s'),
             ];
 
-            if (!$this->validate($data)) {
-                $result = ['status' => 'error', 'message' => $this->validator->getErrors(), 'csrf_token' => csrf_hash()];
+            // Validate user input using the UserModel's validation rules
+            if (!$this->validate($this->userModel->validationRules)) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => $this->validator->getErrors(),
+                    'csrf_token' => csrf_hash()
+                ]);
+            }
+
+            // Check if email already exists
+            if ($this->userModel->where('email', $data['email'])->first()) {
+                return $this->response->setJSON([
+                    'status' => 'error',
+                    'message' => 'The email is already registered.',
+                    'csrf_token' => csrf_hash()
+                ]);
             }
 
             if ($this->userModel->insert($data)) {

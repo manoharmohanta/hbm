@@ -178,3 +178,60 @@ in APPPATH/Controllers/Hotel.php on line 35.
 INFO - 2025-02-06 08:21:52 --> CSRF token verified.
 INFO - 2025-02-06 08:22:48 --> CSRF token verified.
 INFO - 2025-02-06 08:22:50 --> CSRF token verified.
+INFO - 2025-02-06 08:24:14 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:24:15 --> CodeIgniter\Validation\Exceptions\ValidationException: "Manohar" is not a valid rule.
+[Method: POST, Route: hotel/register]
+in SYSTEMPATH/Validation/Validation.php on line 346.
+ 1 SYSTEMPATH/Validation/Validation.php(346): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('Manohar')
+ 2 SYSTEMPATH/Validation/Validation.php(202): CodeIgniter\Validation\Validation->processRules('name', 'name', 'Manohar', [...], [...], 'name')
+ 3 SYSTEMPATH/Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/Hotel.php(98): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->register()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-06 08:27:23 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: hotel/register]
+in SYSTEMPATH/Security/Security.php on line 262.
+ 1 SYSTEMPATH/Security/Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH/Filters/CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH/Filters/Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('hotel/register', 'before')
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:27:32 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:27:32 --> CodeIgniter\Validation\Exceptions\ValidationException: "Manohar" is not a valid rule.
+[Method: POST, Route: hotel/register]
+in SYSTEMPATH/Validation/Validation.php on line 346.
+ 1 SYSTEMPATH/Validation/Validation.php(346): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('Manohar')
+ 2 SYSTEMPATH/Validation/Validation.php(202): CodeIgniter\Validation\Validation->processRules('name', 'name', 'Manohar', [...], [...], 'name')
+ 3 SYSTEMPATH/Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/Hotel.php(98): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->register()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:28:17 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:28:17 --> CodeIgniter\Validation\Exceptions\ValidationException: "Manohar" is not a valid rule.
+[Method: POST, Route: hotel/register]
+in SYSTEMPATH/Validation/Validation.php on line 346.
+ 1 SYSTEMPATH/Validation/Validation.php(346): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('Manohar')
+ 2 SYSTEMPATH/Validation/Validation.php(202): CodeIgniter\Validation\Validation->processRules('name', 'name', 'Manohar', [...], [...], 'name')
+ 3 SYSTEMPATH/Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH/Controllers/Hotel.php(97): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->register()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:31:55 --> CSRF token verified.
+INFO - 2025-02-06 08:34:56 --> CSRF token verified.
+INFO - 2025-02-06 08:35:50 --> CSRF token verified.

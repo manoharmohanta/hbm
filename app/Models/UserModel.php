@@ -18,7 +18,7 @@ class UserModel extends Model{
     // Validation rules for registration
     protected $validationRules = [
         'name'     => 'required|string|max_length[25]',
-        'email'    => 'required|valid_email|is_unique[users.email,id,{id}]', // Allow self-update for email
+        // 'email'    => 'required|valid_email|is_unique[users.email,id,{id}]', // Allow self-update for email
         'phone'    => 'required|numeric|max_length[10]',
         'password' => 'required|min_length[8]',
     ];

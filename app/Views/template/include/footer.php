@@ -41,8 +41,8 @@
             const response = event.detail.xhr.response;
 
             try {
-                const responseData = JSON.parse(response);
-                
+                const responseData = typeof response === 'string' ? JSON.parse(response) : response;
+
                 // Check the response status
                 if (responseData.status === 'success') {
                     Swal.fire({
@@ -50,20 +50,21 @@
                         title: 'Success',
                         text: responseData.message,
                     }).then(() => {
-                        // Redirect to the dashboard after the alert closes
-                        window.location.href = responseData.redirectUrl;  // Replace with the correct URL of your dashboard
+                        // Redirect after success
+                        window.location.href = responseData.redirectUrl;
                     });
+
                 } else if (responseData.status === 'error') {
                     let errorMessage = 'An unknown error occurred.';
 
                     // Handle error messages properly
                     if (typeof responseData.message === 'string') {
                         errorMessage = responseData.message;
-                    } else if (typeof responseData.message === 'object') {
+                    } else if (typeof responseData.message === 'object' && responseData.message !== null) {
                         let errorMessages = '<ul>';
-                        for (const key in responseData.message) {
-                            errorMessages += `<li>${responseData.message[key]}</li>`;
-                        }
+                        Object.entries(responseData.message).forEach(([key, value]) => {
+                            errorMessages += `<li><strong>${key}:</strong> ${value}</li>`;
+                        });
                         errorMessages += '</ul>';
                         errorMessage = errorMessages;
                     }
@@ -82,19 +83,19 @@
                     });
                 }
 
-                // Optionally update the CSRF token if needed
+                // Update CSRF token if present
                 if (responseData.csrf_token) {
                     let csrfInput = document.querySelector('input[name="<?= csrf_token() ?>"]');
                     if (csrfInput) {
                         csrfInput.value = responseData.csrf_token;
                     }
 
-                    // Check if the meta tag for CSRF token exists
                     let csrfMeta = document.querySelector('meta[name="csrf-token"]');
                     if (csrfMeta) {
                         csrfMeta.content = responseData.csrf_token;
                     }
                 }
+
             } catch (e) {
                 // Handle JSON parse errors or other unexpected issues
                 Swal.fire({

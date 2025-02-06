@@ -50,14 +50,17 @@
                         </div>
                         <div class="form-group">
                             <label>Password</label><span class="text-danger">*</span>
-                            <input type="password" name="password" class="form-control" placeholder="Password" value="Manohar">
+                            <input type="password" name="password" class="form-control" placeholder="Password" value="Manohar@3">
                         </div>
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox"> Remember Me
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Sign in</button>
+                        <button type="submit" 
+                                class="btn btn-primary btn-flat m-b-30 m-t-30" 
+                                onclick="this.dataset.originalText = this.innerText; this.disabled = true; this.innerText = 'Logging...';">Sign in
+                        </button>
                     </form>
                     <div class="checkbox pt-1 mb-5">
                         <label class="pull-left">
@@ -81,10 +84,12 @@
     <script>
         function handleResponse(event) {
             const response = event.detail.xhr.response;
+            let button = document.querySelector("button[type='submit']");
+            let originalButtonText = button.dataset.originalText || "Submit";
 
             try {
-                const responseData = JSON.parse(response);
-
+                const responseData = typeof response === 'string' ? JSON.parse(response) : response;
+                
                 // Check the response status
                 if (responseData.status === 'success') {
                     Swal.fire({
@@ -92,20 +97,23 @@
                         title: 'Success',
                         text: responseData.message,
                     }).then(() => {
-                        // Redirect to the dashboard after the alert closes
-                        window.location.href = responseData.redirectUrl;  // Replace with the correct URL of your dashboard
+                        // Redirect after success
+                        window.location.href = responseData.redirectUrl;
                     });
-                } else if (responseData.status === 'error') {
-                    let errorMessage = responseData.message || 'An unknown error occurred.'; // Use the error message if present
 
-                    // If there are errors, show them as a list
-                    if (responseData.errors) {
+                } else if (responseData.status === 'error') {
+                    let errorMessage = 'An unknown error occurred.';
+                    
+                    // Handle error messages properly
+                    if (typeof responseData.message === 'string') {
+                        errorMessage = responseData.message;
+                    } else if (typeof responseData.message === 'object' && responseData.message !== null) {
                         let errorMessages = '<ul>';
-                        for (const key in responseData.errors) {
-                            errorMessages += `<li>${responseData.errors[key]}</li>`;
-                        }
+                        Object.entries(responseData.message).forEach(([key, value]) => {
+                            errorMessages += `<li><strong>${key}:</strong> ${value}</li>`;
+                        });
                         errorMessages += '</ul>';
-                        errorMessage += '<br>' + errorMessages;
+                        errorMessage = errorMessages;
                     }
 
                     Swal.fire({
@@ -122,11 +130,19 @@
                     });
                 }
 
-                // Optionally update the CSRF token if needed
+                // Update CSRF token if present
                 if (responseData.csrf_token) {
-                    document.querySelector('input[name="<?= csrf_token() ?>"]').value = responseData.csrf_token;
-                    document.querySelector('meta[name="csrf-token"]').content = response.csrf_token;
+                    let csrfInput = document.querySelector('input[name="<?= csrf_token() ?>"]');
+                    if (csrfInput) {
+                        csrfInput.value = responseData.csrf_token;
+                    }
+
+                    let csrfMeta = document.querySelector('meta[name="csrf-token"]');
+                    if (csrfMeta) {
+                        csrfMeta.content = responseData.csrf_token;
+                    }
                 }
+
             } catch (e) {
                 // Handle JSON parse errors or other unexpected issues
                 Swal.fire({
@@ -136,6 +152,8 @@
                 });
                 console.error('Error parsing response:', e);
             }
+            button.disabled = false;
+            button.innerText = originalButtonText;
         }
     </script>
 </body>

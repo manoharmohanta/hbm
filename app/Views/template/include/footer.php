@@ -39,7 +39,11 @@
     <script>
         function handleResponse(event) {
             const response = event.detail.xhr.response;
-
+            let button = document.querySelector("button[type='submit']");
+            let originalButtonText = "Submit"; // Default value
+            if (button) {
+                let originalButtonText = button.dataset.originalText || button.innerText || "Submit";
+            }
             try {
                 const responseData = typeof response === 'string' ? JSON.parse(response) : response;
 
@@ -61,10 +65,19 @@
                     if (typeof responseData.message === 'string') {
                         errorMessage = responseData.message;
                     } else if (typeof responseData.message === 'object' && responseData.message !== null) {
-                        let errorMessages = '<ul>';
-                        Object.entries(responseData.message).forEach(([key, value]) => {
-                            errorMessages += `<li><strong>${key}:</strong> ${value}</li>`;
-                        });
+                        let errorMessages = '<ul class="list-group list-group-flush">';
+                        
+                        // Merge `message` and `errors` if both exist
+                        if (responseData.message && typeof responseData.message === 'object') {
+                            Object.entries(responseData.message).forEach(([key, value]) => {
+                                errorMessages += `<li class="list-group-item"><strong>${key.toUpperCase()}:</strong> ${value}</li>`;
+                            });
+                        }
+                        if (responseData.errors && typeof responseData.errors === 'object') {
+                            Object.entries(responseData.errors).forEach(([key, value]) => {
+                                errorMessages += `<li class="list-group-item"><strong>${key.toUpperCase()}:</strong> ${value}</li>`;
+                            });
+                        }
                         errorMessages += '</ul>';
                         errorMessage = errorMessages;
                     }
@@ -104,6 +117,11 @@
                     text: 'Failed to process the server response. Please try again.',
                 });
                 console.error('Error parsing response:', e);
+            }
+            if (button) {
+                // Restore button state
+                button.disabled = false;
+                button.innerText = originalButtonText;
             }
         }
     </script>

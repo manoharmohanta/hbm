@@ -33,7 +33,7 @@
                         <div class="card">
                             <div class="card-header"><strong>User Details</strong><small> Update</small></div>
                             <div class="card-body card-block">
-                                <form hx-post="<?= base_url('hotel/profile') ?>" hx-trigger="click[event.target.matches('button')]"
+                                <form hx-post="<?= base_url(session()->get('controller').'/profile') ?>" hx-trigger="click[event.target.matches('button')]"
                                         hx-on::after-request="handleResponse(event)"
                                         hx-swap="none">
                                     <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
@@ -45,7 +45,7 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label for="email" class=" form-control-label">Email Id</label>
-                                                <input type="email" name="email" placeholder="Enter your email" class="form-control" value="<?= $user['email'] ?> ">
+                                                <input type="email" name="email" placeholder="Enter your email" class="form-control" value="<?= $user['email'] ?> " disabled>
                                             </div>
                                         </div>
                                         <div class="col-6">
@@ -59,7 +59,7 @@
                                         <label for="password" class=" form-control-label">Update Password</label>
                                         <input type="password" name="password" placeholder="Enter new password" class="form-control">
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-flat pull-right m-b-30 m-t-30">Update Details</button>
+                                    <button type="submit" class="btn btn-primary btn-flat pull-right m-b-30 m-t-30"  onclick="this.disabled = true; this.innerText = 'Updateing...';">Update Details</button>
                                 </form>    
                             </div>
                         </div>

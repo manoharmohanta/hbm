@@ -12,8 +12,8 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li><a href="<?= base_url('hotel') ?>">Home</a></li>
-                            <li><a href="<?= base_url('hotel/hotel') ?>">Hotel</a></li>
+                            <li><a href="<?= base_url(session()->get('controller')) ?>">Home</a></li>
+                            <li><a href="<?= base_url(session()->get('controller').'/hotel') ?>">Hotel</a></li>
                         </ol>
                     </div>
                 </div>

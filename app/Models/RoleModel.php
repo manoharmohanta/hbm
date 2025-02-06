@@ -5,29 +5,27 @@ use CodeIgniter\Model;
 class RoleModel extends Model{
     protected $table      = 'roles';
     protected $primaryKey = 'id';
+    protected $allowedFields = ['name'];
 
     protected $returnType = 'array';
-    protected $useSoftDeletes = false;
-
-    protected $allowedFields = ['name'];
+    protected $useSoftDeletes = true;
+    protected $deletedField  = 'deleted_at';
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
     protected $validationRules    = [
-        'name' => 'required|min_length[3]|max_length[255]',
+        'name' => 'required|min_length[3]|max_length[25]',
     ];
 
     protected $validationMessages = [
         'name' => [
             'required' => 'The role name is required.',
             'min_length' => 'The role name must be at least 3 characters long.',
-            'max_length' => 'The role name cannot exceed 255 characters.',
+            'max_length' => 'The role name cannot exceed 25 characters.',
         ],
     ];
-
-    protected $skipValidation = false;
 
     /**
      * Add a new role
@@ -43,8 +41,7 @@ class RoleModel extends Model{
         } else {
             return [
                 'status' => 'error',
-                'message' => 'Failed to register role.',
-                'errors' => $this->errors(),
+                'message' => $this->errors(),
                 'csrf_token' => csrf_hash()
             ];
         }
@@ -64,8 +61,7 @@ class RoleModel extends Model{
         } else {
             return [
                 'status' => 'error',
-                'message' => 'Failed to update role.',
-                'errors' => $this->errors(),
+                'message' => $this->errors(),
                 'csrf_token' => csrf_hash()
             ];
         }

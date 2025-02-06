@@ -18,6 +18,19 @@ class Hotel_manager extends BaseController{
         6. Super Admit - He will able to see all the things.
     */
     // Dashboard
+    protected $roleModel;
+    protected $className;
+    protected $hotelModel;
+    protected $UHORelationModel;
+    protected $userModel;
+
+    public function __construct(){
+        $this->roleModel = new RoleModel();
+        $this->hotelModel = new HotelModel();
+        $this->UHORelationModel = new UHORelationModel();
+        $this->userModel = new UserModel();
+        $this->className = (new \ReflectionClass($this))->getShortName();
+    }
     public function index(){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
@@ -39,18 +52,42 @@ class Hotel_manager extends BaseController{
             // Prepare the updated data
             $updatedData = [
                 'name'  => $this->request->getPost('name'),
-                'email' => $this->request->getPost('email'),
+                // 'email' => $this->request->getPost('email'),
                 'phone' => $this->request->getPost('phone'),
             ];
 
-            if ($this->request->getPost('password')) {
-                $updatedData['password'] = $this->request->getPost('password'); // Password will be hashed in the model
+            $validationRules = [
+                'name'     => 'required|min_length[3]|max_length[25]',
+                'phone'    => 'required|numeric|max_length[10]',
+            ];
+            
+            if (!$this->validate($validationRules)) {
+                return $this->response->setJSON([
+                    'status'  => 'error',
+                    'message' => $this->validator->getErrors(),
+                    'csrf_token' => csrf_hash()
+                ]);
             }
 
-            // Call updateUser() from UserModel
-            $response = $userModel->updateUser($user['id'], $updatedData);
+            if ($this->request->getPost('password')) {
+                $updatedData['password'] = password_hash($this->request->getPost('password'), PASSWORD_ARGON2ID); // Password will be hashed in the model
 
-            if ($response['status'] === 'success') {
+                $validationRules = [
+                    'password' => 'required|min_length[8]',
+                ];
+
+                if (!$this->validate($validationRules)) {
+                    return $this->response->setJSON([
+                        'status'  => 'error',
+                        'message' => $this->validator->getErrors(),
+                        'csrf_token' => csrf_hash()
+                    ]);
+                }
+            }
+
+            $response = $this->userModel->update($user['id'], $updatedData);
+
+            if ($response) {
                 // Update session data after saving
                 $updatedUser = $userModel->find($user['id']);
                 $session = session();
@@ -61,12 +98,29 @@ class Hotel_manager extends BaseController{
 
                 // Update the session with merged data
                 $session->set('user', $updatedUserData);
+
+                $response = array(
+                    'status' => 'success',
+                    'message' => 'User updated successfully',
+                    'redirectUrl' => base_url(session()->get('controller').'/profile'),
+                    'csrf_token' => csrf_hash()
+                );
+            }else{
+                $response = array(
+                    'status' => 'error',
+                    'message' => 'Failed to update user.',
+                    'redirectUrl' => base_url(session()->get('controller').'/profile'),
+                    'csrf_token' => csrf_hash()
+                );
             }
 
             return $this->response->setJSON($response);
         }
 
-        $data['user'] = $this->getUserDataFromSession();
+        $data['user'] = $this->userModel->select('users.*,roles.name as role_name')
+                                        ->where('users.id', session()->get('user')['id'])
+                                        ->join('roles', 'roles.id=users.role_id')
+                                        ->first();
         return view('template/include/header') . view('template/profile', $data) . view('template/include/footer');
     }
     // CURD Manager

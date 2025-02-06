@@ -33,40 +33,32 @@ class Hotel extends BaseController{
             // print_r(sizeof($user));exit();
 
             if (!($user)) {
+                log_message('error', 'Failed login attempt for email: ' . $email);
                 return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid email.', 'csrf_token' => csrf_hash()]);
             }
 
             // Ensure password verification only runs if user exists
             if (!password_verify($password, $user['password'])) {
+                log_message('error', 'Failed login attempt for email: ' . $email);
                 return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid password.', 'csrf_token' => csrf_hash()]);
             }
 
             // Check if the user has activated their email
             if (!$user['email_activation']) {
+                log_message('error', 'Failed login attempt for email: ' . $email);
                 return $this->response->setJSON(['status' => 'error', 'message' => 'Activate your email.', 'csrf_token' => csrf_hash()]);
             }
 
             // Check if the user is active
             if ($user['status'] !== 'active') {
+                log_message('error', 'Failed login attempt for email: ' . $email);
                 return $this->response->setJSON(['status' => 'error', 'message' => 'You are suspended from this platform.', 'csrf_token' => csrf_hash()]);
             }
 
-
+            session()->regenerate(); // Regenerate session ID after successful login
             session()->set('user', $user);
 
-            // Define role-based redirect URLs
-            $redirectUrls = [
-                1 => 'super-admin',       // super_admin
-                2 => 'hotel-owner',       // hotel_owner
-                3 => 'hotel-manager',     // hotel_manager
-                4 => 'front-office',      // front_office
-                5 => 'housekeeping',      // housekeeping
-                6 => 'kitchen',           // kitchen
-                7 => 'staff',             // staff
-                8 => 'customer',          // customer
-            ];
-
-            // Get redirect URL based on role_id
+            $redirectUrls = config('Roles')->redirect_urls;
             $redirectUrl = $redirectUrls[$user['role_id']] ?? 'hotel'; // Fallback URL
 
             session()->set('controller', $redirectUrl);
@@ -77,6 +69,7 @@ class Hotel extends BaseController{
                 'redirectUrl' => base_url($redirectUrl),
                 'csrf_token' => csrf_hash(),
             ];
+            log_message('info', 'User logged in: ' . $user['email']);
 
             // Return JSON response
             return $this->response->setJSON($result);
@@ -91,7 +84,7 @@ class Hotel extends BaseController{
                 'name' => $this->request->getPost('name'),
                 'email' => $this->request->getPost('email'),
                 'phone' => $this->request->getPost('phone'),
-                'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT), // Hash the password
+                'password' => password_hash($this->request->getPost('password'), PASSWORD_ARGON2ID), // Hash the password
             ];
 
             // Validate user input using the UserModel's validation rules

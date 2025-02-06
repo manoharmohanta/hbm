@@ -38,41 +38,41 @@
                     </a>
                 </div>
                 <div class="login-form">
-                <form hx-post="<?= base_url('hotel/register') ?>" 
-                        hx-target="this"
-                        hx-trigger="click[event.target.matches('button')]"
-                        hx-on::after-request="handleResponse(event)"
-                        hx-swap="none" class="form">
-                    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
-                    <div class="form-group">
-                        <label>Full Name (As per id Proof)</label><span class="text-danger">*</span>
-                        <input type="text" class="form-control" name="name" placeholder="User Name" value="Manohar">
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label>Email address</label><span class="text-danger">*</span>
-                                <input type="email" class="form-control" name="email" placeholder="Email" value="Manohar@idp.com">
+                    <form hx-post="<?= base_url('hotel/register') ?>" 
+                            hx-target="this"
+                            hx-trigger="click[event.target.matches('button')]"
+                            hx-on::after-request="handleResponse(event)"
+                            hx-swap="none" class="form">
+                        <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
+                        <div class="form-group">
+                            <label>Full Name (As per id Proof)</label><span class="text-danger">*</span>
+                            <input type="text" class="form-control" name="name" placeholder="User Name" value="Manohar">
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Email address</label><span class="text-danger">*</span>
+                                    <input type="email" class="form-control" name="email" placeholder="Email" value="Manohar@idp.com">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Phone number</label><span class="text-danger">*</span>
+                                    <input type="tel" class="form-control" name="phone" placeholder="+91-" value="8801005610">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label>Phone number</label><span class="text-danger">*</span>
-                                <input type="tel" class="form-control" name="phone" placeholder="+91-" value="8801005610">
-                            </div>
+                        <div class="form-group">
+                            <label>Password</label><span class="text-danger">*</span>
+                            <input type="password" class="form-control" name="password" placeholder="Password" value="Manohar@3">
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label><span class="text-danger">*</span>
-                        <input type="password" class="form-control" name="password" placeholder="Password" value="Manohar">
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> Agree the terms &amp; policy that you are the owner of property
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
-                </form>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Agree the terms &amp; policy that you are the owner of property
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30" onclick="this.dataset.originalText = this.innerText; this.disabled = true; this.innerText = 'Registering...';">Register</button>
+                    </form>
                 <div class="register-link m-t-15 text-center">
                     <p>Already have account ? <a href="<?= base_url('hotel/login') ?>"> Sign in</a></p>
                 </div>
@@ -91,10 +91,12 @@
     <script>
         function handleResponse(event) {
             const response = event.detail.xhr.response;
+            let button = document.querySelector("button[type='submit']");
+            let originalButtonText = button.dataset.originalText || "Submit";
 
             try {
-                const responseData = JSON.parse(response);
-
+                const responseData = typeof response === 'string' ? JSON.parse(response) : response;
+                
                 // Check the response status
                 if (responseData.status === 'success') {
                     Swal.fire({
@@ -102,20 +104,23 @@
                         title: 'Success',
                         text: responseData.message,
                     }).then(() => {
-                        // Redirect to the dashboard after the alert closes
-                        window.location.href = responseData.redirectUrl;  // Replace with the correct URL of your dashboard
+                        // Redirect after success
+                        window.location.href = responseData.redirectUrl;
                     });
-                } else if (responseData.status === 'error') {
-                    let errorMessage = responseData.message || 'An unknown error occurred.'; // Use the error message if present
 
-                    // If there are errors, show them as a list
-                    if (responseData.errors) {
+                } else if (responseData.status === 'error') {
+                    let errorMessage = 'An unknown error occurred.';
+                    
+                    // Handle error messages properly
+                    if (typeof responseData.message === 'string') {
+                        errorMessage = responseData.message;
+                    } else if (typeof responseData.message === 'object' && responseData.message !== null) {
                         let errorMessages = '<ul>';
-                        for (const key in responseData.errors) {
-                            errorMessages += `<li>${responseData.errors[key]}</li>`;
-                        }
+                        Object.entries(responseData.message).forEach(([key, value]) => {
+                            errorMessages += `<li><strong>${key}:</strong> ${value}</li>`;
+                        });
                         errorMessages += '</ul>';
-                        errorMessage += '<br>' + errorMessages;
+                        errorMessage = errorMessages;
                     }
 
                     Swal.fire({
@@ -132,11 +137,19 @@
                     });
                 }
 
-                // Optionally update the CSRF token if needed
+                // Update CSRF token if present
                 if (responseData.csrf_token) {
-                    document.querySelector('input[name="<?= csrf_token() ?>"]').value = responseData.csrf_token;
-                    document.querySelector('meta[name="csrf-token"]').content = response.csrf_token;
+                    let csrfInput = document.querySelector('input[name="<?= csrf_token() ?>"]');
+                    if (csrfInput) {
+                        csrfInput.value = responseData.csrf_token;
+                    }
+
+                    let csrfMeta = document.querySelector('meta[name="csrf-token"]');
+                    if (csrfMeta) {
+                        csrfMeta.content = responseData.csrf_token;
+                    }
                 }
+
             } catch (e) {
                 // Handle JSON parse errors or other unexpected issues
                 Swal.fire({
@@ -146,6 +159,8 @@
                 });
                 console.error('Error parsing response:', e);
             }
+            button.disabled = false;
+            button.innerText = originalButtonText;
         }
     </script>
 </body>

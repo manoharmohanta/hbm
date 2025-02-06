@@ -112,7 +112,9 @@
                             </div>
 
                             <!-- Submit Button -->
-                            <button type="submit" class="btn btn-primary btn-flat pull-right m-b-30 m-t-30">
+                            <button type="submit" 
+                                    class="btn btn-primary btn-flat pull-right m-b-30 m-t-30"
+                                    onclick="this.dataset.originalText = this.innerText; this.disabled = true; this.innerText = '<?= isset($users) ? 'Updating...' : 'Saving...' ?>';">
                                 <?= isset($users) ? 'Update User' : 'Save User' ?>
                             </button>
                         </form>

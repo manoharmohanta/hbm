@@ -56,18 +56,42 @@ class Hotel_owner extends BaseController{
             // Prepare the updated data
             $updatedData = [
                 'name'  => $this->request->getPost('name'),
-                'email' => $this->request->getPost('email'),
+                // 'email' => $this->request->getPost('email'),
                 'phone' => $this->request->getPost('phone'),
             ];
 
-            if ($this->request->getPost('password')) {
-                $updatedData['password'] = $this->request->getPost('password'); // Password will be hashed in the model
+            $validationRules = [
+                'name'     => 'required|min_length[3]|max_length[25]',
+                'phone'    => 'required|numeric|max_length[10]',
+            ];
+            
+            if (!$this->validate($validationRules)) {
+                return $this->response->setJSON([
+                    'status'  => 'error',
+                    'message' => $this->validator->getErrors(),
+                    'csrf_token' => csrf_hash()
+                ]);
             }
 
-            // Call updateUser() from UserModel
-            $response = $userModel->updateUser($user['id'], $updatedData);
+            if ($this->request->getPost('password')) {
+                $updatedData['password'] = password_hash($this->request->getPost('password'), PASSWORD_ARGON2ID); // Password will be hashed in the model
 
-            if ($response['status'] === 'success') {
+                $validationRules = [
+                    'password' => 'required|min_length[8]',
+                ];
+
+                if (!$this->validate($validationRules)) {
+                    return $this->response->setJSON([
+                        'status'  => 'error',
+                        'message' => $this->validator->getErrors(),
+                        'csrf_token' => csrf_hash()
+                    ]);
+                }
+            }
+
+            $response = $this->userModel->update($user['id'], $updatedData);
+
+            if ($response) {
                 // Update session data after saving
                 $updatedUser = $userModel->find($user['id']);
                 $session = session();
@@ -79,13 +103,28 @@ class Hotel_owner extends BaseController{
                 // Update the session with merged data
                 $session->set('user', $updatedUserData);
 
-                $response['redirectUrl'] = base_url(session()->get('controller').'/profile');
+                $response = array(
+                    'status' => 'success',
+                    'message' => 'User updated successfully',
+                    'redirectUrl' => base_url(session()->get('controller').'/profile'),
+                    'csrf_token' => csrf_hash()
+                );
+            }else{
+                $response = array(
+                    'status' => 'error',
+                    'message' => 'Failed to update user.',
+                    'redirectUrl' => base_url(session()->get('controller').'/profile'),
+                    'csrf_token' => csrf_hash()
+                );
             }
 
             return $this->response->setJSON($response);
         }
 
-        $data['user'] = $this->getUserDataFromSession();
+        $data['user'] = $this->userModel->select('users.*,roles.name as role_name')
+                                        ->where('users.id', session()->get('user')['id'])
+                                        ->join('roles', 'roles.id=users.role_id')
+                                        ->first();
         return view('template/include/header') . view('template/profile', $data) . view('template/include/footer');
     }
     // CURD Role
@@ -177,6 +216,7 @@ class Hotel_owner extends BaseController{
                                         ->join('users', 'users.id = u_h_o_relation.user_id') // First join users table
                                         ->join('roles', 'roles.id = users.role_id') // Then join roles table
                                         ->join('hotels', 'hotels.id = u_h_o_relation.hotel_id') // Then join roles table
+                                        ->where('users.deleted_at', null)
                                         ->get()
                                         ->getResultArray();
     
@@ -199,7 +239,7 @@ class Hotel_owner extends BaseController{
             ];
 
             // Insert user data
-            $userInsertResponse = $this->userModel->registerUser($data);
+            $userInsertResponse = $this->userModel->insert($data);
             if (!$userInsertResponse) {
                 return ['status' => 'error', 'message' => 'User insertion failed.', 'csrf_token' => csrf_hash()];
             }
@@ -263,7 +303,7 @@ class Hotel_owner extends BaseController{
                 $data['password'] = password_hash($password, PASSWORD_DEFAULT);
             }
             
-            $update = $this->userModel->updateUser($id, $data);
+            $update = $this->userModel->update($id, $data);
     
             if ($update) {
                 // Update hotel-user relationship if hotel_id is changed
@@ -281,9 +321,10 @@ class Hotel_owner extends BaseController{
                     'csrf_token' => csrf_hash()
                 ];
             } else {
+                $errors = $this->userModel->errors();
                 $response = [
                     'status' => 'error',
-                    'message' => 'Failed to update user. Please try again.',
+                    'message' => $errors ?: 'Failed to update user. Please try again.',
                     'csrf_token' => csrf_hash()
                 ];
             }
@@ -305,9 +346,9 @@ class Hotel_owner extends BaseController{
         }
         if ($this->request->getMethod() === 'post'  || $this->request->hasHeader('HX-Request')) {
 
-            $response = $this->userModel->delete($id);
-
-            if ($response) {
+            $this->UHORelationModel->where('user_id', $id)->delete();
+            
+            if ($this->userModel->delete($id)) {
                 $response = array(
                     'status' => 'success',
                     'message' => 'User deleted successfully.',
@@ -328,7 +369,6 @@ class Hotel_owner extends BaseController{
             return $this->response->setJSON($response);
         }
     }
-
     // CURD Hotel
     public function hotel(){
         if (!$this->isUserLoggedIn()) {
@@ -371,7 +411,6 @@ class Hotel_owner extends BaseController{
                 'email_id' => strip_tags($this->request->getPost('email_id')),
                 'address' => strip_tags($this->request->getPost('address')),
                 'hotel_owner_id' => $userData['id'],
-                'created_at' => Time::now()->toDateTimeString()
             ];
 
             // Insert data securely
@@ -383,9 +422,10 @@ class Hotel_owner extends BaseController{
                     'csrf_token' => csrf_hash()
                 ]);
             } else {
+                $errors = $this->hotelModel->errors();
                 return $this->response->setJSON([
                     'status' => 'error',
-                    'message' => 'Failed to add hotel. Please try again.',
+                    'message' => $errors ?: 'Failed to add hotel. Please try again.', // Fallback message if no specific errors
                     'csrf_token' => csrf_hash()
                 ]);
             }
@@ -515,27 +555,6 @@ class Hotel_owner extends BaseController{
             return redirect()->to(base_url('hotel/logout'));
         }
     }
-    // Hotel Staff
-    public function hotel_staff(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
-    public function add_hotel_staff(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
-    public function edit_hotel_staff(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
-    public function delete_hotel_staff(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
     // Hotel Menu Staff
     public function menu(){
         if (!$this->isUserLoggedIn()) {
@@ -601,28 +620,6 @@ class Hotel_owner extends BaseController{
     }
     //check out
     public function checkout() {
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
-
-    // CURD Manager
-    public function manager(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
-    public function add_manager(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
-    public function edit_manager(){
-        if (!$this->isUserLoggedIn()) {
-            return redirect()->to(base_url('hotel/logout'));
-        }
-    }
-    public function delete_manager(){
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }

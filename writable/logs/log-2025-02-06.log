@@ -1,0 +1,180 @@
+DEBUG - 2025-02-06 07:36:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 07:36:17 --> CSRF token verified.
+INFO - 2025-02-06 07:41:15 --> CSRF token verified.
+DEBUG - 2025-02-06 07:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 07:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 07:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 07:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 07:46:00 --> CSRF token verified.
+DEBUG - 2025-02-06 07:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 07:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 07:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 07:46:14 --> CSRF token verified.
+DEBUG - 2025-02-06 07:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 07:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 07:52:41 --> CSRF token verified.
+DEBUG - 2025-02-06 07:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 07:53:19 --> CSRF token verified.
+CRITICAL - 2025-02-06 07:53:19 --> ErrorException: Trying to access array offset on null
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 37.
+ 1 APPPATH/Controllers/Hotel.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 37)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 07:53:29 --> CSRF token verified.
+CRITICAL - 2025-02-06 07:53:29 --> ErrorException: Trying to access array offset on null
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 37.
+ 1 APPPATH/Controllers/Hotel.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 37)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 07:54:08 --> CSRF token verified.
+INFO - 2025-02-06 07:57:06 --> CSRF token verified.
+INFO - 2025-02-06 08:01:42 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:01:42 --> ErrorException: Trying to access array offset on null
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 38.
+ 1 APPPATH/Controllers/Hotel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 38)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:03:11 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:03:11 --> ErrorException: Trying to access array offset on null
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 38.
+ 1 APPPATH/Controllers/Hotel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 38)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:04:14 --> CSRF token verified.
+INFO - 2025-02-06 08:05:13 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:05:13 --> TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 33.
+ 1 APPPATH/Controllers/Hotel.php(33): sizeof(null)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:05:53 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:05:53 --> ErrorException: Trying to access array offset on null
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 38.
+ 1 APPPATH/Controllers/Hotel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 38)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:06:21 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:06:21 --> ErrorException: Trying to access array offset on null
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 38.
+ 1 APPPATH/Controllers/Hotel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 38)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:11:15 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:11:15 --> ErrorException: Trying to access array offset on null
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 38.
+ 1 APPPATH/Controllers/Hotel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 38)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:15:45 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:15:45 --> ErrorException: Trying to access array offset on null
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 38.
+ 1 APPPATH/Controllers/Hotel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 38)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:18:04 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:18:04 --> ErrorException: Undefined array key "password"
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 38.
+ 1 APPPATH/Controllers/Hotel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password"', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 38)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:18:32 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:18:32 --> ErrorException: Undefined array key "password"
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 40.
+ 1 APPPATH/Controllers/Hotel.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password"', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 40)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:18:48 --> CSRF token verified.
+INFO - 2025-02-06 08:19:09 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:19:09 --> ErrorException: Undefined array key "password"
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 40.
+ 1 APPPATH/Controllers/Hotel.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password"', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 40)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:19:31 --> CSRF token verified.
+INFO - 2025-02-06 08:20:18 --> CSRF token verified.
+INFO - 2025-02-06 08:20:35 --> CSRF token verified.
+INFO - 2025-02-06 08:20:43 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:20:43 --> ErrorException: Undefined array key "password"
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 40.
+ 1 APPPATH/Controllers/Hotel.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password"', '/Applications/MAMP/htdocs/hbm/app/Controllers/Hotel.php', 40)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:21:30 --> CSRF token verified.
+CRITICAL - 2025-02-06 08:21:30 --> TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given
+[Method: POST, Route: hotel/login]
+in APPPATH/Controllers/Hotel.php on line 35.
+ 1 APPPATH/Controllers/Hotel.php(35): sizeof(null)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Hotel->login()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-06 08:21:52 --> CSRF token verified.
+INFO - 2025-02-06 08:22:48 --> CSRF token verified.
+INFO - 2025-02-06 08:22:50 --> CSRF token verified.

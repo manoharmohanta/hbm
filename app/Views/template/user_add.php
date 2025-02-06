@@ -75,8 +75,8 @@
                                             <?php 
                                                 if(isset($hotels)){
                                                     foreach($hotels as $hotel){
-                                                        if(isset($users['hotel_id'])){
-                                                            echo '<option  value="'.$hotel['id'].'" '. (($users['hotel_id'] == $hotel['id']) ? 'selected': '') .'>'. $hotel['name'] .'</option>';
+                                                        if(isset($userRelation['hotel_id'])){
+                                                            echo '<option  value="'.$hotel['id'].'" '. (($userRelation['hotel_id'] == $hotel['id']) ? 'selected': '') .'>'. $hotel['name'] .'</option>';
                                                         }else{
                                                             echo '<option value="'.$hotel['id'].'">'. $hotel['name'] .'</option>';
                                                         }
@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="name" class="form-control-label">Role Name</label>
-                                        <select name="email_activation" id="select" class="form-control">
+                                        <select name="role_id" id="select" class="form-control">
                                             <option value="">Please select</option>
                                             <?php 
                                                 if (isset($roles)) {

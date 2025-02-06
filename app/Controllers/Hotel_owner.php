@@ -172,19 +172,13 @@ class Hotel_owner extends BaseController{
     
         $userData = $this->getUserDataFromSession();
     
-        $data['users'] = $this->userModel
-            ->select('users.*, roles.name as role_name')
-            ->join('roles', 'roles.id = users.role_id')
-            ->join('managers', 'users.id = managers.user_id', 'left')
-            ->join('hotels', 'hotels.id = managers.hotel_id', 'left')
-            ->where('users.id !=', $userData['id']) // Exclude logged-in user if needed
-            ->groupStart()
-                ->where('hotels.user_id', $userData['id']) // Fetch staff of hotels owned
-                ->orWhere('managers.user_id IS NOT NULL') // Ensure user is a manager or staff
-            ->groupEnd()
-            ->groupBy('users.id') // Avoid duplicate users
-            ->get()
-            ->getResultArray();
+        $data['users'] = $this->UHORelationModel
+                                        ->select('users.*, roles.name as role_name')
+                                        ->join('users', 'users.id = u_h_o_relation.user_id') // First join users table
+                                        ->join('roles', 'roles.id = users.role_id') // Then join roles table
+                                        ->join('hotels', 'hotels.id = u_h_o_relation.hotel_id') // Then join roles table
+                                        ->get()
+                                        ->getResultArray();
     
         return view('template/include/header') . view('template/user_view', $data) . view('template/include/footer');
     }
@@ -197,68 +191,112 @@ class Hotel_owner extends BaseController{
 
         if ($this->request->getMethod() === 'post' || $this->request->hasHeader('HX-Request')) {
             $data = [
-                'name' => $this->request->getPost('name'),
-                'email' => $this->request->getPost('email'),
-                'phone' => $this->request->getPost('phone'),
+                'name'     => $this->request->getPost('name'),
+                'email'    => $this->request->getPost('email'),
+                'phone'    => $this->request->getPost('phone'),
+                'role_id'  => $this->request->getPost('role_id'),
                 'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT), // Hash the password
             ];
-            $response = $this->userModel->insert($data);
-            $insertedId = $this->userModel->insertID();
 
-            if($response['status'] == 'success'){
-                $data = [
-                    'user_id'  => $insertedId,  // ID of the user to be assigned as manager
-                    'hotel_id' => $this->request->getPost('hotel_id'),        // ID of the hotel
-                ];
-
-                $response = $this->UHORelationModel->insert($data);
-
-                if($response){
-                    $response = array(
-                        'status' => 'success',
-                        'message' => 'User registered successfully.',
-                        'redirectUrl' => base_url($this->className . '/user'),
-                        'csrf_token' => csrf_hash()
-                    );
-                }
+            // Insert user data
+            $userInsertResponse = $this->userModel->registerUser($data);
+            if (!$userInsertResponse) {
+                return ['status' => 'error', 'message' => 'User insertion failed.', 'csrf_token' => csrf_hash()];
             }
 
-            return $this->response->setJSON($response);
+            $insertedId = $this->userModel->insertID();
+
+            // Insert relation between user and hotel
+            $hotelRelationData = [
+                'user_id'      => $insertedId,  // ID of the user to be assigned as manager
+                'hotel_id'     => $this->request->getPost('hotel_id'),  // ID of the hotel
+                'hotel_owner_id' => $userData['id'],
+            ];
+
+            $hotelRelationResponse = $this->UHORelationModel->insert($hotelRelationData);
+
+            if (!$hotelRelationResponse) {
+                return ['status' => 'error', 'message' => 'Failed to link user with hotel.', 'csrf_token' => csrf_hash()];
+            }
+
+            // Success response
+            return $this->response->setJSON([
+                'status'      => 'success',
+                'message'     => 'User registered successfully.',
+                'redirectUrl' => base_url($this->className . '/user'),
+                'csrf_token'  => csrf_hash()
+            ]);
         }
-        $user = $this->getUserDataFromSession();
-        $data['hotels'] = $this->hotelModel->where('user_id',$user['id'])
-                                            ->findAll();
+
+        // Handle non-POST requests (i.e., load form view)
+        $data['hotels'] = $this->hotelModel->where('user_id', $userData['id'])->findAll();
         $data['roles'] = $this->roleModel->findAll();
-        return view('template/include/header') . view('template/user_add',$data) . view('template/include/footer');
+        return view('template/include/header') . view('template/user_add', $data) . view('template/include/footer');
     }
-    public function edit_user($id){
+    public function edit_user($id) {
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }
+    
+        $userData = $this->getUserDataFromSession();
+        
+        // Fetch user details
+        $user = $this->userModel->find($id);
+        if (!$user) {
+            return redirect()->to(base_url($this->className . '/user'))->with('error', 'User not found.');
+        }
+    
+        // Fetch user's hotel relation
+        $userRelation = $this->UHORelationModel->where('user_id', $id)->first();
+    
         if ($this->request->getMethod() === 'post' || $this->request->hasHeader('HX-Request')) {
             $data = [
                 'name' => $this->request->getPost('name'),
                 'email' => $this->request->getPost('email'),
                 'phone' => $this->request->getPost('phone'),
-                'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT), // Hash the password
+                'role_id' => $this->request->getPost('role_id'),
             ];
-            $userId = $this->request->getPost('id');
-
-            $response = $this->userModel->updateUser($userId,$data);
-
-            if($response){
-                $response['redirectUrl'] = base_url(session()->get('controller').'/user');
+    
+            // Update password only if provided
+            $password = $this->request->getPost('password');
+            if (!empty($password)) {
+                $data['password'] = password_hash($password, PASSWORD_DEFAULT);
             }
-
+            
+            $update = $this->userModel->updateUser($id, $data);
+    
+            if ($update) {
+                // Update hotel-user relationship if hotel_id is changed
+                $hotelId = $this->request->getPost('hotel_id');
+                if ($userRelation && $hotelId != $userRelation['hotel_id']) {
+                    $this->UHORelationModel->update($userRelation['id'], [
+                        'hotel_id' => $hotelId
+                    ]);
+                }
+    
+                $response = [
+                    'status' => 'success',
+                    'message' => 'User updated successfully.',
+                    'redirectUrl' => base_url($this->className . '/user'),
+                    'csrf_token' => csrf_hash()
+                ];
+            } else {
+                $response = [
+                    'status' => 'error',
+                    'message' => 'Failed to update user. Please try again.',
+                    'csrf_token' => csrf_hash()
+                ];
+            }
+    
             return $this->response->setJSON($response);
         }
-        $data['users'] = $this->userModel->select('users.*, roles.name as role_name')
-                                        ->where('users.id',$id)
-                                        ->join('roles', 'roles.id = users.role_id')
-                                        ->join('managers', 'manager.user_id = users.user_id')
-                                        ->first();
+    
+        // Fetch hotels and roles for the dropdowns
+        $data['hotels'] = $this->hotelModel->where('user_id', $userData['id'])->findAll();
         $data['roles'] = $this->roleModel->findAll();
-        // echo "<pre>";print_r($data); exit();
+        $data['users'] = $user;
+        $data['userRelation'] = $userRelation;
+    
         return view('template/include/header') . view('template/user_add', $data) . view('template/include/footer');
     }
     public function delete_user($id){

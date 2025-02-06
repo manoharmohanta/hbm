@@ -7,10 +7,11 @@ use Config\Database;
 
 class Hotel extends BaseController{
     private $db;
-
+    private $userModel;
     public function __construct()
     {
         $this->db = Database::connect();
+        $this->userModel = new UserModel();
     }
     public function index() {
         if(!$this->db->tableExists('migrations')){
@@ -27,8 +28,55 @@ class Hotel extends BaseController{
             $password = $this->request->getPost('password');
 
             // Create an instance of UserModel and register the user
-            $userModel = new UserModel();
-            $result = $userModel->loginUser($email, $password);
+            $user = $this->userModel->where('email', $email)->first();
+
+            // print_r(sizeof($user));exit();
+
+            if (!($user)) {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid email.', 'csrf_token' => csrf_hash()]);
+            }
+
+            // Ensure password verification only runs if user exists
+            if (!password_verify($password, $user['password'])) {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid password.', 'csrf_token' => csrf_hash()]);
+            }
+
+            // Check if the user has activated their email
+            if (!$user['email_activation']) {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'Activate your email.', 'csrf_token' => csrf_hash()]);
+            }
+
+            // Check if the user is active
+            if ($user['status'] !== 'active') {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'You are suspended from this platform.', 'csrf_token' => csrf_hash()]);
+            }
+
+
+            session()->set('user', $user);
+
+            // Define role-based redirect URLs
+            $redirectUrls = [
+                1 => 'super-admin',       // super_admin
+                2 => 'hotel-owner',       // hotel_owner
+                3 => 'hotel-manager',     // hotel_manager
+                4 => 'front-office',      // front_office
+                5 => 'housekeeping',      // housekeeping
+                6 => 'kitchen',           // kitchen
+                7 => 'staff',             // staff
+                8 => 'customer',          // customer
+            ];
+
+            // Get redirect URL based on role_id
+            $redirectUrl = $redirectUrls[$user['role_id']] ?? 'hotel'; // Fallback URL
+
+            session()->set('controller', $redirectUrl);
+
+            $result = [
+                'status' => 'success',
+                'message' => 'Login successful!',
+                'redirectUrl' => base_url($redirectUrl),
+                'csrf_token' => csrf_hash(),
+            ];
 
             // Return JSON response
             return $this->response->setJSON($result);
@@ -47,9 +95,20 @@ class Hotel extends BaseController{
                 'created_at' => date('Y-m-d H:i:s'),
             ];
 
-            // Create an instance of UserModel and register the user
-            $userModel = new UserModel();
-            $result = $userModel->registerUser($data);
+            if (!$this->validate($data)) {
+                $result = ['status' => 'error', 'message' => $this->validator->getErrors(), 'csrf_token' => csrf_hash()];
+            }
+
+            if ($this->userModel->insert($data)) {
+                $result = [
+                    'status' => 'success',
+                    'message' => 'User registered successfully.',
+                    'redirectUrl' => base_url('hotel/login'),
+                    'csrf_token' => csrf_hash()
+                ];
+            } else {
+                $result = ['status' => 'error', 'message' => 'Failed to register user.', 'csrf_token' => csrf_hash()];
+            }
 
             // Return JSON response
             return $this->response->setJSON($result);

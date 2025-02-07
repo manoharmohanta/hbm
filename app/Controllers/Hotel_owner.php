@@ -539,6 +539,12 @@ class Hotel_owner extends BaseController{
         if (!$this->isUserLoggedIn()) {
             return redirect()->to(base_url('hotel/logout'));
         }
+        if ($this->request->getMethod() === 'post' || $this->request->hasHeader('HX-Request')) {
+            
+        }
+        $userId = $this->getUserDataFromSession()['id']; // Assuming user_id is stored in session
+        $data['hotels'] = $this->hotelModel->where('user_id', $userId)->findAll();
+        return view('template/include/header').view('template/room_view',$data).view('template/include/footer');
     }
     public function add_room(){
         if (!$this->isUserLoggedIn()) {
